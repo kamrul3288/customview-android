@@ -1,5 +1,6 @@
 package com.iamkamrul.utils
 
+import android.content.Context
 import android.graphics.Typeface
 
 object FontsOverride {
@@ -9,8 +10,10 @@ object FontsOverride {
     var mediumFontTypeFace:Typeface? = null
     var italicFontTypeFace:Typeface? = null
 
-    fun setDefaultFont(staticTypefaceFieldName: String, typeFace: Typeface) {
-        replaceFont(staticTypefaceFieldName, typeFace)
+    fun setDefaultFont(staticTypefaceFieldName: String, typeFace: Typeface?) {
+        typeFace?.let {
+            replaceFont(staticTypefaceFieldName, typeFace)
+        }
     }
 
 
@@ -24,5 +27,9 @@ object FontsOverride {
         } catch (e: IllegalAccessException) {
             e.printStackTrace()
         }
+    }
+
+    fun createTypeFace(context: Context,fontName:String):Typeface{
+        return Typeface.createFromAsset(context.assets,fontName)
     }
 }

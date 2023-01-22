@@ -31,7 +31,6 @@ android {
 }
 
 dependencies {
-    implementation project(ModulesDependencies.customview)
     implementation AppDependencies.core_ktx
     implementation AppDependencies.appcompat
     implementation AppDependencies.material
