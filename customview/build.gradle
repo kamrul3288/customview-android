@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.iamkamrul.customview'
+    namespace 'com.iamkamrul'
     compileSdk AppConfig.compileSdkVersion
 
     defaultConfig {
