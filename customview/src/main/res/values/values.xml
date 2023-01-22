@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTextView">
+        <attr name="cv_background_color" format="color"/>
+        <attr name="cv_border_radius" format="integer"/>
+        <attr name="cv_stroke_color" format="color"/>
+        <attr name="cv_stroke_width" format="integer"/>
+        <attr name="cv_ripple_color" format="color"/>
+        <attr name="cv_disable_color" format="color"/>
+
+        <attr name="cv_background_shape">
+            <flag name="stroke" value="1"/>
+            <flag name="rectangle" value="2"/>
+            <flag name="oval" value="3"/>
+            <flag name="stroke_circle" value="4"/>
+        </attr>
+    </declare-styleable>
+</resources>
