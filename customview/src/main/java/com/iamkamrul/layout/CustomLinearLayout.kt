@@ -24,13 +24,13 @@ open class CustomLinearLayout : LinearLayoutCompat{
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomLinearLayout,0,0)
-        val backgroundColor = typedArray.getColor(R.styleable.CustomLinearLayout_cv_background_color, Color.TRANSPARENT)
-        val backgroundBorderRadius = typedArray.getInt(R.styleable.CustomLinearLayout_cv_border_radius,3)
-        val backgroundShapeType = typedArray.getString(R.styleable.CustomLinearLayout_cv_background_shape)?:"1" //1(stroke) 2(rectangle)
-        val strokeColor = typedArray.getColor(R.styleable.CustomLinearLayout_cv_stroke_color, Color.TRANSPARENT)
-        val strokeWithSize = typedArray.getInt(R.styleable.CustomLinearLayout_cv_stroke_width,0)
-        val backgroundRippleColor = typedArray.getColor(R.styleable.CustomLinearLayout_cv_ripple_color, Color.LTGRAY)
-        val backgroundDisableColor = typedArray.getColor(R.styleable.CustomLinearLayout_cv_disable_color, Color.GRAY)
+        val backgroundColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_background_color, Color.TRANSPARENT)
+        val backgroundBorderRadius = typedArray.getInt(R.styleable.CustomLinearLayout_ll_border_radius,3)
+        val backgroundShapeType = typedArray.getString(R.styleable.CustomLinearLayout_ll_background_shape)?:"1" //1(stroke) 2(rectangle)
+        val strokeColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_stroke_color, Color.TRANSPARENT)
+        val strokeWithSize = typedArray.getInt(R.styleable.CustomLinearLayout_ll_stroke_width,0)
+        val backgroundRippleColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_ripple_color, Color.LTGRAY)
+        val backgroundDisableColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_disable_color, Color.GRAY)
         typedArray.recycle()
 
 

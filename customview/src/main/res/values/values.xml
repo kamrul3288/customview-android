@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomTextView">
-        <attr name="cv_background_color" format="color"/>
-        <attr name="cv_border_radius" format="integer"/>
-        <attr name="cv_stroke_color" format="color"/>
-        <attr name="cv_stroke_width" format="integer"/>
-        <attr name="cv_ripple_color" format="color"/>
-        <attr name="cv_disable_color" format="color"/>
+        <attr name="tv_background_color" format="color"/>
+        <attr name="tv_border_radius" format="integer"/>
+        <attr name="tv_stroke_color" format="color"/>
+        <attr name="tv_stroke_width" format="integer"/>
+        <attr name="tv_ripple_color" format="color"/>
+        <attr name="tv_disable_color" format="color"/>
 
-        <attr name="cv_background_shape">
+        <attr name="tv_background_shape">
             <flag name="stroke" value="1"/>
             <flag name="rectangle" value="2"/>
             <flag name="oval" value="3"/>
@@ -18,34 +18,49 @@
 
 
     <declare-styleable name="CustomLinearLayout">
-        <attr name="cv_background_color" format="color"/>
-        <attr name="cv_border_radius" format="integer"/>
-        <attr name="cv_stroke_color" format="color"/>
-        <attr name="cv_stroke_width" format="integer"/>
-        <attr name="cv_ripple_color" format="color"/>
-        <attr name="cv_disable_color" format="color"/>
+        <attr name="ll_background_color" format="color"/>
+        <attr name="ll_border_radius" format="integer"/>
+        <attr name="ll_stroke_color" format="color"/>
+        <attr name="ll_stroke_width" format="integer"/>
+        <attr name="ll_ripple_color" format="color"/>
+        <attr name="ll_disable_color" format="color"/>
 
-        <attr name="cv_background_shape">
+        <attr name="ll_background_shape">
             <flag name="stroke" value="1"/>
             <flag name="rectangle" value="2"/>
             <flag name="oval" value="3"/>
             <flag name="stroke_circle" value="4"/>
         </attr>
     </declare-styleable>
+
+
 
     <declare-styleable name="CustomConstraintLayout">
-        <attr name="cv_background_color" format="color"/>
-        <attr name="cv_border_radius" format="integer"/>
-        <attr name="cv_stroke_color" format="color"/>
-        <attr name="cv_stroke_width" format="integer"/>
-        <attr name="cv_ripple_color" format="color"/>
-        <attr name="cv_disable_color" format="color"/>
+        <attr name="cl_background_color" format="color"/>
+        <attr name="cl_border_radius" format="integer"/>
+        <attr name="cl_stroke_color" format="color"/>
+        <attr name="cl_stroke_width" format="integer"/>
+        <attr name="cl_ripple_color" format="color"/>
+        <attr name="cl_disable_color" format="color"/>
 
-        <attr name="cv_background_shape">
+        <attr name="cl_background_shape">
             <flag name="stroke" value="1"/>
             <flag name="rectangle" value="2"/>
             <flag name="oval" value="3"/>
             <flag name="stroke_circle" value="4"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="CustomInputLayout">
+        <attr name="validation_type">
+            <flag name="phone" value="1"/>
+            <flag name="email" value="2"/>
+            <flag name="password" value="3"/>
+            <flag name="empty_check" value="4"/>
+        </attr>
+        <attr name="realtime_validation_enable" format="boolean"/>
+        <attr name="validation_error_message" format="string"/>
+        <attr name="validation_error_icon" format="reference"/>
+    </declare-styleable>
+
 </resources>

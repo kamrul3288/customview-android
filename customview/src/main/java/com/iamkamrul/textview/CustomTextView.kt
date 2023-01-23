@@ -30,13 +30,13 @@ open class CustomTextView : AppCompatTextView{
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomTextView,0,0)
-        val backgroundColor = typedArray.getColor(R.styleable.CustomTextView_cv_background_color, Color.TRANSPARENT)
-        val backgroundBorderRadius = typedArray.getInt(R.styleable.CustomTextView_cv_border_radius,3)
-        val backgroundShapeType = typedArray.getString(R.styleable.CustomTextView_cv_background_shape)?:"1" //1(stroke) 2(rectangle)
-        val strokeColor = typedArray.getColor(R.styleable.CustomTextView_cv_stroke_color, Color.TRANSPARENT)
-        val strokeWithSize = typedArray.getInt(R.styleable.CustomTextView_cv_stroke_width,0)
-        val backgroundRippleColor = typedArray.getColor(R.styleable.CustomTextView_cv_ripple_color, Color.LTGRAY)
-        val backgroundDisableColor = typedArray.getColor(R.styleable.CustomTextView_cv_disable_color, Color.GRAY)
+        val backgroundColor = typedArray.getColor(R.styleable.CustomTextView_tv_background_color, Color.TRANSPARENT)
+        val backgroundBorderRadius = typedArray.getInt(R.styleable.CustomTextView_tv_border_radius,3)
+        val backgroundShapeType = typedArray.getString(R.styleable.CustomTextView_tv_background_shape)?:"1" //1(stroke) 2(rectangle)
+        val strokeColor = typedArray.getColor(R.styleable.CustomTextView_tv_stroke_color, Color.TRANSPARENT)
+        val strokeWithSize = typedArray.getInt(R.styleable.CustomTextView_tv_stroke_width,0)
+        val backgroundRippleColor = typedArray.getColor(R.styleable.CustomTextView_tv_ripple_color, Color.LTGRAY)
+        val backgroundDisableColor = typedArray.getColor(R.styleable.CustomTextView_tv_disable_color, Color.GRAY)
         typedArray.recycle()
 
 
