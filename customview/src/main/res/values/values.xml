@@ -67,6 +67,22 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="View">
+        <attr name="view_background_color" format="color"/>
+        <attr name="view_border_radius" format="dimension"/>
+        <attr name="view_stroke_color" format="color"/>
+        <attr name="view_stroke_width" format="dimension"/>
+        <attr name="view_ripple_color" format="color"/>
+        <attr name="view_disable_color" format="color"/>
+
+        <attr name="view_background_shape">
+            <flag name="stroke" value="1"/>
+            <flag name="rectangle" value="2"/>
+            <flag name="oval" value="3"/>
+            <flag name="stroke_circle" value="4"/>
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="TextInputLayout">
         <attr name="input_layout_validation_type">
             <flag name="phone" value="1"/>
