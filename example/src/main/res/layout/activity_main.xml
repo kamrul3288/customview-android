@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <com.iamkamrul.input.CustomTextInputLayout
@@ -13,14 +15,10 @@
         app:input_layout_error_message="Hello Errror"
         app:input_layout_error_icon="@drawable/ic_launcher_background"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginEnd="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -28,5 +26,14 @@
 
     </com.iamkamrul.input.CustomTextInputLayout>
 
+    <com.iamkamrul.textview.CustomTextView
+        android:layout_marginTop="16dp"
+        app:tv_stroke_width="1dp"
+        app:tv_stroke_color="@color/black"
+        android:text="Hello"
+        android:gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="80dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
