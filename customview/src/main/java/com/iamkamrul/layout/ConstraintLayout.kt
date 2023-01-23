@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.iamkamrul.R
 
-open class CustomConstraintLayout : ConstraintLayout{
+open class ConstraintLayout : ConstraintLayout {
 
     constructor(context: Context) : super(context)
 

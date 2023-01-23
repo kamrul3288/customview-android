@@ -11,7 +11,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import com.iamkamrul.R
 import com.iamkamrul.utils.FontsOverride
 
-open class CustomTextView : AppCompatTextView{
+open class TextViewRegular : AppCompatTextView{
 
     constructor(context: Context) : super(context){
         applyCustomFont()

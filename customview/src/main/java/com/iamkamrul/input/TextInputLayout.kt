@@ -13,11 +13,11 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.textfield.TextInputLayout
 import com.iamkamrul.R
-import com.iamkamrul.textview.CustomTextView
+import com.iamkamrul.textview.TextViewRegular
 import com.iamkamrul.utils.FontsOverride
 import com.iamkamrul.utils.displayRatioValue
 
-class CustomTextInputLayout : TextInputLayout{
+class TextInputLayout : TextInputLayout {
     private lateinit var errorTextView: TextView
     private lateinit var errorView: LinearLayout
     private  var errorIcon:Drawable? = null
@@ -54,7 +54,7 @@ class CustomTextInputLayout : TextInputLayout{
         val errorTextColor = typedArray.getColor(R.styleable.CustomTextInputLayout_input_layout_error_text_color,Color.RED)
         val errorTextSize = typedArray.getDimension(R.styleable.CustomTextInputLayout_input_layout_error_text_size,12f)
 
-        errorTextView = CustomTextView(context)
+        errorTextView = TextViewRegular(context)
         errorTextView.setTextColor(errorTextColor)
         errorTextView.textSize = errorTextSize
         val errorImageView = ImageView(context)

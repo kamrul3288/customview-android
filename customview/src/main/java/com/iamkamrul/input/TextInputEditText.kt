@@ -5,7 +5,8 @@ import android.util.AttributeSet
 import com.google.android.material.textfield.TextInputEditText
 import com.iamkamrul.utils.FontsOverride
 
-open class CustomTextInputEditText : TextInputEditText{
+open class TextInputEditText :
+    TextInputEditText {
 
     constructor(context: Context) : super(context){
         applyCustomFont()

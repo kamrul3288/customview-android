@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.LinearLayoutCompat
 import com.iamkamrul.R
 
-open class CustomLinearLayout : LinearLayoutCompat{
+open class LinearLayout : LinearLayoutCompat{
 
     constructor(context: Context) : super(context)
 
