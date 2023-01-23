@@ -11,7 +11,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```gradle
 dependencies {
-  implementation "com.github.kamrul3288:customview-android:1.0.0"
+  implementation "com.github.kamrul3288:customview-android:1.0.1"
 }
 ```
 
