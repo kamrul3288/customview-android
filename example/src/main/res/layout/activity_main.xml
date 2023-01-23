@@ -12,7 +12,7 @@
     <com.iamkamrul.input.TextInputLayout
         app:input_layout_validation_enable="true"
         app:input_layout_validation_type="phone"
-        app:input_layout_error_message="Hello Errror"
+        app:input_layout_error_message="Hello error message"
         app:input_layout_error_icon="@drawable/ic_launcher_background"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
 
     <com.iamkamrul.view.View
         app:view_background_color="@color/black"
-        app:view_border_radius="10dp"
+        app:view_background_shape="oval"
         android:layout_margin="16dp"
         android:layout_width="100dp"
         android:layout_height="100dp"/>

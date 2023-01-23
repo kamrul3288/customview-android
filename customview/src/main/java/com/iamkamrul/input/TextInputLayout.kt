@@ -130,8 +130,8 @@ class TextInputLayout : TextInputLayout {
     }
 
     fun setErrorText(text:String?){
-        this.isErrorEnabled = text != null
-        errorView.isVisible = text != null && errorIcon != null
+        this.isErrorEnabled = text?.isNotEmpty() == true
+        errorView.isVisible = text?.isNotEmpty() == true && errorIcon != null
         error = text
         errorTextView.text = text
     }
