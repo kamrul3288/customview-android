@@ -36,5 +36,13 @@
         android:layout_width="120dp"
         android:layout_height="80dp"/>
 
+    <com.iamkamrul.button.ButtonRegular
+        android:text="Hello"
+        android:layout_margin="16dp"
+        app:btn_background_color="@color/teal_200"
+        app:btn_border_radius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

@@ -16,6 +16,22 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="ButtonRegular">
+        <attr name="btn_background_color" format="color"/>
+        <attr name="btn_border_radius" format="dimension"/>
+        <attr name="btn_stroke_color" format="color"/>
+        <attr name="btn_stroke_width" format="dimension"/>
+        <attr name="btn_ripple_color" format="color"/>
+        <attr name="btn_disable_color" format="color"/>
+
+        <attr name="btn_background_shape">
+            <flag name="stroke" value="1"/>
+            <flag name="rectangle" value="2"/>
+            <flag name="oval" value="3"/>
+            <flag name="stroke_circle" value="4"/>
+        </attr>
+    </declare-styleable>
+
 
     <declare-styleable name="CustomLinearLayout">
         <attr name="ll_background_color" format="color"/>
