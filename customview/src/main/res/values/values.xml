@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CustomTextView">
+    <declare-styleable name="TextViewRegular">
         <attr name="tv_background_color" format="color"/>
         <attr name="tv_border_radius" format="dimension"/>
         <attr name="tv_stroke_color" format="color"/>
@@ -33,7 +33,7 @@
     </declare-styleable>
 
 
-    <declare-styleable name="CustomLinearLayout">
+    <declare-styleable name="LinearLayout">
         <attr name="ll_background_color" format="color"/>
         <attr name="ll_border_radius" format="dimension"/>
         <attr name="ll_stroke_color" format="color"/>
@@ -51,7 +51,7 @@
 
 
 
-    <declare-styleable name="CustomConstraintLayout">
+    <declare-styleable name="ConstraintLayout">
         <attr name="cl_background_color" format="color"/>
         <attr name="cl_border_radius" format="dimension"/>
         <attr name="cl_stroke_color" format="color"/>
@@ -67,7 +67,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="CustomTextInputLayout">
+    <declare-styleable name="TextInputLayout">
         <attr name="input_layout_validation_type">
             <flag name="phone" value="1"/>
             <flag name="email" value="2"/>

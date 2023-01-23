@@ -46,13 +46,13 @@ class TextInputLayout : TextInputLayout {
     private fun applyAttribute(attrs: AttributeSet, context: Context){
 
         //---------------validation-------------------------
-        val typedArray = context.obtainStyledAttributes(attrs,R.styleable.CustomTextInputLayout,0,0)
-        val isValidationEnable = typedArray.getBoolean(R.styleable.CustomTextInputLayout_input_layout_validation_enable,false)
-        val validationType = typedArray.getString(R.styleable.CustomTextInputLayout_input_layout_validation_type)
-        val errorMessage = typedArray.getString(R.styleable.CustomTextInputLayout_input_layout_error_message)
-        errorIcon = typedArray.getDrawable(R.styleable.CustomTextInputLayout_input_layout_error_icon)
-        val errorTextColor = typedArray.getColor(R.styleable.CustomTextInputLayout_input_layout_error_text_color,Color.RED)
-        val errorTextSize = typedArray.getDimension(R.styleable.CustomTextInputLayout_input_layout_error_text_size,12f)
+        val typedArray = context.obtainStyledAttributes(attrs,R.styleable.TextInputLayout,0,0)
+        val isValidationEnable = typedArray.getBoolean(R.styleable.TextInputLayout_input_layout_validation_enable,false)
+        val validationType = typedArray.getString(R.styleable.TextInputLayout_input_layout_validation_type)
+        val errorMessage = typedArray.getString(R.styleable.TextInputLayout_input_layout_error_message)
+        errorIcon = typedArray.getDrawable(R.styleable.TextInputLayout_input_layout_error_icon)
+        val errorTextColor = typedArray.getColor(R.styleable.TextInputLayout_input_layout_error_text_color,Color.RED)
+        val errorTextSize = typedArray.getDimension(R.styleable.TextInputLayout_input_layout_error_text_size,12f)
 
         errorTextView = TextViewRegular(context)
         errorTextView.setTextColor(errorTextColor)

@@ -22,14 +22,14 @@ open class ConstraintLayout : ConstraintLayout {
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomConstraintLayout,0,0)
-        val backgroundColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_background_color, Color.TRANSPARENT)
-        val backgroundBorderRadius = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_border_radius,0f)
-        val backgroundShapeType = typedArray.getString(R.styleable.CustomConstraintLayout_cl_background_shape)?:"1" //1(stroke) 2(rectangle)
-        val strokeColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_stroke_color, Color.TRANSPARENT)
-        val strokeWithSize = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_stroke_width,0f)
-        val backgroundRippleColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_ripple_color, Color.LTGRAY)
-        val backgroundDisableColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_disable_color, Color.GRAY)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ConstraintLayout,0,0)
+        val backgroundColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_background_color, Color.TRANSPARENT)
+        val backgroundBorderRadius = typedArray.getDimension(R.styleable.ConstraintLayout_cl_border_radius,0f)
+        val backgroundShapeType = typedArray.getString(R.styleable.ConstraintLayout_cl_background_shape)?:"1" //1(stroke) 2(rectangle)
+        val strokeColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_stroke_color, Color.TRANSPARENT)
+        val strokeWithSize = typedArray.getDimension(R.styleable.ConstraintLayout_cl_stroke_width,0f)
+        val backgroundRippleColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_ripple_color, Color.LTGRAY)
+        val backgroundDisableColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_disable_color, Color.GRAY)
         typedArray.recycle()
 
 
