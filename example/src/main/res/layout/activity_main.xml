@@ -7,6 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.iamkamrul.input.CustomTextInputLayout
+        app:input_layout_validation_enable="true"
+        app:input_layout_validation_type="phone"
+        app:input_layout_error_message="Hello Errror"
+        app:input_layout_error_icon="@drawable/ic_launcher_background"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.iamkamrul.input.CustomTextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

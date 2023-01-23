@@ -51,16 +51,18 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="CustomInputLayout">
-        <attr name="validation_type">
+    <declare-styleable name="CustomTextInputLayout">
+        <attr name="input_layout_validation_type">
             <flag name="phone" value="1"/>
             <flag name="email" value="2"/>
             <flag name="password" value="3"/>
             <flag name="empty_check" value="4"/>
         </attr>
-        <attr name="realtime_validation_enable" format="boolean"/>
-        <attr name="validation_error_message" format="string"/>
-        <attr name="validation_error_icon" format="reference"/>
+        <attr name="input_layout_validation_enable" format="boolean"/>
+        <attr name="input_layout_error_message" format="string"/>
+        <attr name="input_layout_error_text_color" format="color"/>
+        <attr name="input_layout_error_text_size" format="dimension"/>
+        <attr name="input_layout_error_icon" format="reference"/>
     </declare-styleable>
 
 </resources>
