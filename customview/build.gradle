@@ -41,3 +41,16 @@ dependencies {
     androidTestImplementation AppDependencies.extJunit
     androidTestImplementation AppDependencies.espresso
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.kamrul3288'
+                artifactId = 'customview-android'
+                version = '1.0.0'
+            }
+        }
+    }
+}

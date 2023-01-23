@@ -9,4 +9,6 @@ repositories {
     mavenCentral()
     gradlePluginPortal()
     maven ("https://oss.jfrog.org/libs-snapshot")
+    maven ("https://jitpack.io")
+
 }
