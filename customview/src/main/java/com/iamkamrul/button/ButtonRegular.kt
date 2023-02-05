@@ -10,6 +10,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatButton
 import com.iamkamrul.R
 import com.iamkamrul.utils.FontsOverride
+import com.iamkamrul.utils.Shape
 
 open class ButtonRegular : AppCompatButton {
 
@@ -31,7 +32,7 @@ open class ButtonRegular : AppCompatButton {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ButtonRegular,0,0)
         val backgroundColor = typedArray.getColor(R.styleable.ButtonRegular_btn_background_color, Color.TRANSPARENT)
         val backgroundBorderRadius = typedArray.getDimension(R.styleable.ButtonRegular_btn_border_radius,0f)
-        val backgroundShapeType = typedArray.getString(R.styleable.ButtonRegular_btn_background_shape)?:"1" //1(stroke) 2(rectangle)
+        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.ButtonRegular_btn_background_shape,1)]
         val strokeColor = typedArray.getColor(R.styleable.ButtonRegular_btn_stroke_color, Color.TRANSPARENT)
         val strokeWithSize = typedArray.getDimension(R.styleable.ButtonRegular_btn_stroke_width,0f)
         val backgroundRippleColor = typedArray.getColor(R.styleable.ButtonRegular_btn_ripple_color, Color.LTGRAY)
@@ -56,21 +57,21 @@ open class ButtonRegular : AppCompatButton {
 
         when (backgroundShapeType) {
             // stroke
-            "1","0x1" -> {
+            Shape.Stroke -> {
                 drawableBuilder.shape = GradientDrawable.RECTANGLE
                 drawableBuilder.setStroke(strokeWithSize.toInt(),strokeColor)
                 drawableBuilder.cornerRadius = backgroundBorderRadius
             }
             // rectangle
-            "2","0x2" ->{
+            Shape.Rectangle ->{
                 drawableBuilder.shape = GradientDrawable.RECTANGLE
                 drawableBuilder.cornerRadius = backgroundBorderRadius
             }
             // oval
-            "3","0x3" -> drawableBuilder.shape = GradientDrawable.OVAL
+            Shape.Oval -> drawableBuilder.shape = GradientDrawable.OVAL
 
             // stroke Circle
-            "4","0x4" -> {
+            Shape.StrokeCircle -> {
                 drawableBuilder.shape = GradientDrawable.OVAL
                 drawableBuilder.setStroke(strokeWithSize.toInt(),strokeColor)
             }

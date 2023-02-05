@@ -8,11 +8,11 @@
         <attr name="tv_ripple_color" format="color"/>
         <attr name="tv_disable_color" format="color"/>
 
-        <attr name="tv_background_shape">
-            <flag name="stroke" value="1"/>
-            <flag name="rectangle" value="2"/>
-            <flag name="oval" value="3"/>
-            <flag name="stroke_circle" value="4"/>
+        <attr name="tv_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
         </attr>
     </declare-styleable>
 
@@ -24,11 +24,11 @@
         <attr name="btn_ripple_color" format="color"/>
         <attr name="btn_disable_color" format="color"/>
 
-        <attr name="btn_background_shape">
-            <flag name="stroke" value="1"/>
-            <flag name="rectangle" value="2"/>
-            <flag name="oval" value="3"/>
-            <flag name="stroke_circle" value="4"/>
+        <attr name="btn_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
         </attr>
     </declare-styleable>
 
@@ -41,11 +41,11 @@
         <attr name="ll_ripple_color" format="color"/>
         <attr name="ll_disable_color" format="color"/>
 
-        <attr name="ll_background_shape">
-            <flag name="stroke" value="1"/>
-            <flag name="rectangle" value="2"/>
-            <flag name="oval" value="3"/>
-            <flag name="stroke_circle" value="4"/>
+        <attr name="ll_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
         </attr>
     </declare-styleable>
 
@@ -59,11 +59,11 @@
         <attr name="cl_ripple_color" format="color"/>
         <attr name="cl_disable_color" format="color"/>
 
-        <attr name="cl_background_shape">
-            <flag name="stroke" value="1"/>
-            <flag name="rectangle" value="2"/>
-            <flag name="oval" value="3"/>
-            <flag name="stroke_circle" value="4"/>
+        <attr name="cl_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
         </attr>
     </declare-styleable>
 
@@ -75,11 +75,11 @@
         <attr name="view_ripple_color" format="color"/>
         <attr name="view_disable_color" format="color"/>
 
-        <attr name="view_background_shape">
-            <flag name="stroke" value="1"/>
-            <flag name="rectangle" value="2"/>
-            <flag name="oval" value="3"/>
-            <flag name="stroke_circle" value="4"/>
+        <attr name="view_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
         </attr>
     </declare-styleable>
 
