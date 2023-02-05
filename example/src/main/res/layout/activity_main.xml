@@ -10,10 +10,13 @@
     tools:context=".MainActivity">
 
     <com.iamkamrul.input.TextInputLayout
-        app:input_layout_validation_enable="true"
-        app:input_layout_validation_type="phone"
-        app:input_layout_error_message="Hello error message"
+        android:id="@+id/exampleIL"
         app:input_layout_error_icon="@drawable/ic_launcher_background"
+        app:input_layout_validation_enable="true"
+        app:input_layout_validation_type="password"
+        app:input_layout_error_message="Hello"
+        app:input_layout_password_min_length="six"
+        app:input_layout_phone_number_country_code="BD"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,15 +29,25 @@
 
     </com.iamkamrul.input.TextInputLayout>
 
+    <com.iamkamrul.button.ButtonRegular
+        android:id="@+id/validateBtn"
+        android:text="Validate"
+        android:layout_margin="16dp"
+        app:btn_background_color="@color/purple_200"
+        app:btn_border_radius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
     <com.iamkamrul.textview.TextViewRegular
         android:layout_marginTop="16dp"
         app:tv_stroke_width="1dp"
         app:tv_stroke_color="@color/black"
+        app:tv_background_shape="stroke_circle"
         android:text="Hello"
         android:gravity="center"
         android:layout_width="120dp"
-        android:layout_height="80dp"/>
+        android:layout_height="120dp"/>
 
     <com.iamkamrul.view.View
         app:view_background_color="@color/black"

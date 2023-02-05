@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.validateBtn.setOnClickListener {
+            binding.exampleIL.setErrorText("Hello")
+        }
     }
 }

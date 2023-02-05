@@ -104,8 +104,8 @@ class TextInputLayout : TextInputLayout {
                         }
 
                         //------------email number validation-----------------
-                        if (validationType == InputValidationType.Email){//
-                            if (it.length<10) setErrorText(errorMessage)
+                        if (validationType == InputValidationType.Email){
+                            if (it.toString().isValidEmail()) setErrorText(errorMessage)
                             else setErrorText(null)
                             return@let
                         }
