@@ -7,6 +7,8 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
+import androidx.annotation.ColorInt
+import androidx.annotation.Dimension
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.iamkamrul.R
 import com.iamkamrul.utils.Shape
@@ -33,7 +35,26 @@ open class ConstraintLayout : ConstraintLayout {
         val backgroundDisableColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_disable_color, Color.GRAY)
         typedArray.recycle()
 
+        setShape(
+            backgroundColor = backgroundColor,
+            backgroundBorderRadius = backgroundBorderRadius,
+            backgroundShapeType = backgroundShapeType,
+            strokeColor = strokeColor,
+            strokeWithSize = strokeWithSize,
+            backgroundRippleColor = backgroundRippleColor,
+            backgroundDisableColor = backgroundDisableColor,
+        )
+    }
 
+    fun setShape(
+        @ColorInt backgroundColor:Int = Color.TRANSPARENT,
+        @Dimension backgroundBorderRadius:Float = 0f,
+        backgroundShapeType:Shape = Shape.Rectangle,
+        @ColorInt strokeColor:Int = Color.TRANSPARENT,
+        @Dimension strokeWithSize:Float = 0f,
+        @ColorInt backgroundRippleColor:Int = Color.LTGRAY,
+        @ColorInt backgroundDisableColor:Int = Color.GRAY,
+    ){
         val drawableBuilder = GradientDrawable()
         val contentColor = ColorStateList(
             arrayOf(
@@ -91,8 +112,6 @@ open class ConstraintLayout : ConstraintLayout {
         drawableBuilder.invalidateSelf()
         rippleDrawable.invalidateSelf()
         background = rippleDrawable
-
-
     }
 
 }

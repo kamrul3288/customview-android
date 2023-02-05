@@ -9,6 +9,8 @@ import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
 import com.iamkamrul.R
 import android.view.View
+import androidx.annotation.ColorInt
+import androidx.annotation.Dimension
 import com.iamkamrul.utils.Shape
 
 open class View : View {
@@ -34,6 +36,26 @@ open class View : View {
         typedArray.recycle()
 
 
+        setShape(
+            backgroundColor = backgroundColor,
+            backgroundBorderRadius = backgroundBorderRadius,
+            backgroundShapeType = backgroundShapeType,
+            strokeColor = strokeColor,
+            strokeWithSize = strokeWithSize,
+            backgroundRippleColor = backgroundRippleColor,
+            backgroundDisableColor = backgroundDisableColor,
+        )
+    }
+
+    fun setShape(
+        @ColorInt backgroundColor:Int = Color.TRANSPARENT,
+        @Dimension backgroundBorderRadius:Float = 0f,
+        backgroundShapeType:Shape = Shape.Rectangle,
+        @ColorInt strokeColor:Int = Color.TRANSPARENT,
+        @Dimension strokeWithSize:Float = 0f,
+        @ColorInt backgroundRippleColor:Int = Color.LTGRAY,
+        @ColorInt backgroundDisableColor:Int = Color.GRAY,
+    ){
         val drawableBuilder = GradientDrawable()
         val contentColor = ColorStateList(
             arrayOf(
@@ -91,8 +113,5 @@ open class View : View {
         drawableBuilder.invalidateSelf()
         rippleDrawable.invalidateSelf()
         background = rippleDrawable
-
-
     }
-
 }

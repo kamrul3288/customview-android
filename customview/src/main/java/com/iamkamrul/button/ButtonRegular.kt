@@ -7,6 +7,8 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
+import androidx.annotation.ColorInt
+import androidx.annotation.Dimension
 import androidx.appcompat.widget.AppCompatButton
 import com.iamkamrul.R
 import com.iamkamrul.utils.FontsOverride
@@ -40,6 +42,27 @@ open class ButtonRegular : AppCompatButton {
         typedArray.recycle()
 
 
+        setShape(
+            backgroundColor = backgroundColor,
+            backgroundBorderRadius = backgroundBorderRadius,
+            backgroundShapeType = backgroundShapeType,
+            strokeColor = strokeColor,
+            strokeWithSize = strokeWithSize,
+            backgroundRippleColor = backgroundRippleColor,
+            backgroundDisableColor = backgroundDisableColor,
+        )
+
+    }
+
+    open fun setShape(
+        @ColorInt backgroundColor:Int = Color.TRANSPARENT,
+        @Dimension backgroundBorderRadius:Float = 0f,
+        backgroundShapeType:Shape = Shape.Rectangle,
+        @ColorInt strokeColor:Int = Color.TRANSPARENT,
+        @Dimension strokeWithSize:Float = 0f,
+        @ColorInt backgroundRippleColor:Int = Color.LTGRAY,
+        @ColorInt backgroundDisableColor:Int = Color.GRAY,
+    ){
         val drawableBuilder = GradientDrawable()
         val contentColor = ColorStateList(
             arrayOf(
@@ -97,8 +120,6 @@ open class ButtonRegular : AppCompatButton {
         drawableBuilder.invalidateSelf()
         rippleDrawable.invalidateSelf()
         background = rippleDrawable
-
-
     }
 
     open fun applyCustomFont() {
@@ -106,5 +127,7 @@ open class ButtonRegular : AppCompatButton {
             typeface = FontsOverride.regularFontTypeFace
         }
     }
+
+
 
 }

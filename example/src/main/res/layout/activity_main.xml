@@ -87,5 +87,12 @@
             android:layout_height="100dp"/>
     </RadioGroup>
 
+    <com.iamkamrul.layout.LinearLayout
+        android:id="@+id/exampleLL"
+        app:ll_background_color="@color/purple_200"
+        app:ll_background_shape="rectangle"
+        app:ll_border_radius="10dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
 
 </LinearLayout>

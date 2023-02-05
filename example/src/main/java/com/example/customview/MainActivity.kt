@@ -1,8 +1,11 @@
 package com.example.customview
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.customview.databinding.ActivityMainBinding
+import com.iamkamrul.utils.Shape
+import com.iamkamrul.utils.dp
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +16,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.validateBtn.setOnClickListener {
-            binding.exampleIL.setErrorText("Hello")
+            binding.exampleLL.setShape(
+                backgroundColor = ContextCompat.getColor(applicationContext,R.color.teal_200),
+                backgroundShapeType = Shape.Rectangle,
+                backgroundBorderRadius = dp(10)
+            )
         }
     }
 }

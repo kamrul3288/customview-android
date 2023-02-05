@@ -1,5 +1,5 @@
 package com.iamkamrul.utils
 
-internal enum class Shape{
+enum class Shape{
     Stroke, Rectangle, Oval , StrokeCircle
 }
