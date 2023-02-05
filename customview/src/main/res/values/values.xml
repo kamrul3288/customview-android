@@ -110,4 +110,23 @@
         <attr name="input_layout_error_icon" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="RadioButtonRegular">
+        <attr name="rb_selected_bg_color" format="color"/>
+        <attr name="rb_bg_color" format="color"/>
+        <attr name="rb_border_radius" format="dimension"/>
+        <attr name="rb_stroke_color" format="color"/>
+        <attr name="rb_stroke_width" format="dimension"/>
+        <attr name="rb_ripple_color" format="color"/>
+        <attr name="rb_disable_color" format="color"/>
+        <attr name="rb_text_color" format="color"/>
+        <attr name="rb_selected_text_color" format="color"/>
+
+        <attr name="rb_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
+        </attr>
+    </declare-styleable>
+
 </resources>

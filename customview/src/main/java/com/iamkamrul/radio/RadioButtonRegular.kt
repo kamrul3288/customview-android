@@ -1,4 +1,4 @@
-package com.iamkamrul.button
+package com.iamkamrul.radio
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,12 +7,13 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
-import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatRadioButton
+import androidx.appcompat.widget.AppCompatTextView
 import com.iamkamrul.R
 import com.iamkamrul.utils.FontsOverride
 import com.iamkamrul.utils.Shape
 
-open class ButtonRegular : AppCompatButton {
+open class RadioButtonRegular : AppCompatRadioButton{
 
     constructor(context: Context) : super(context){
         applyCustomFont()
@@ -29,26 +30,45 @@ open class ButtonRegular : AppCompatButton {
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ButtonRegular,0,0)
-        val backgroundColor = typedArray.getColor(R.styleable.ButtonRegular_btn_background_color, Color.TRANSPARENT)
-        val backgroundBorderRadius = typedArray.getDimension(R.styleable.ButtonRegular_btn_border_radius,0f)
-        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.ButtonRegular_btn_background_shape,1)]
-        val strokeColor = typedArray.getColor(R.styleable.ButtonRegular_btn_stroke_color, Color.TRANSPARENT)
-        val strokeWithSize = typedArray.getDimension(R.styleable.ButtonRegular_btn_stroke_width,0f)
-        val backgroundRippleColor = typedArray.getColor(R.styleable.ButtonRegular_btn_ripple_color, Color.LTGRAY)
-        val backgroundDisableColor = typedArray.getColor(R.styleable.ButtonRegular_btn_disable_color, Color.GRAY)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.RadioButtonRegular,0,0)
+        val backgroundColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_bg_color, Color.TRANSPARENT)
+        val selectedBackgroundColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_selected_bg_color, Color.TRANSPARENT)
+        val backgroundBorderRadius = typedArray.getDimension(R.styleable.RadioButtonRegular_rb_border_radius,0f)
+        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.RadioButtonRegular_rb_background_shape,1)]
+        val strokeColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_stroke_color, Color.TRANSPARENT)
+        val strokeWithSize = typedArray.getDimension(R.styleable.RadioButtonRegular_rb_stroke_width,0f)
+        val backgroundRippleColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_ripple_color, Color.LTGRAY)
+        val backgroundDisableColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_disable_color, Color.GRAY)
+        val textColor: Int = typedArray.getColor(R.styleable.RadioButtonRegular_rb_text_color,Color.BLACK)
+        val selectedTextColor: Int = typedArray.getColor(R.styleable.RadioButtonRegular_rb_selected_text_color,Color.BLACK)
         typedArray.recycle()
 
+        setTextColor(ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_activated),
+                intArrayOf(android.R.attr.state_checked),
+                intArrayOf(android.R.attr.state_enabled),
+                intArrayOf(-android.R.attr.state_enabled)
+            ),
+            intArrayOf(
+                textColor,
+                selectedTextColor,
+                textColor,
+                textColor
+            )
+        ))
 
         val drawableBuilder = GradientDrawable()
         val contentColor = ColorStateList(
             arrayOf(
                 intArrayOf(android.R.attr.state_activated),
+                intArrayOf(android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_enabled),
                 intArrayOf(-android.R.attr.state_enabled)
             ),
             intArrayOf(
                 backgroundColor,
+                selectedBackgroundColor,
                 backgroundColor,
                 backgroundDisableColor
             )
@@ -57,7 +77,7 @@ open class ButtonRegular : AppCompatButton {
 
         when (backgroundShapeType) {
             // stroke
-            Shape.Stroke -> {
+           Shape.Stroke -> {
                 drawableBuilder.shape = GradientDrawable.RECTANGLE
                 drawableBuilder.setStroke(strokeWithSize.toInt(),strokeColor)
                 drawableBuilder.cornerRadius = backgroundBorderRadius
@@ -97,6 +117,7 @@ open class ButtonRegular : AppCompatButton {
         drawableBuilder.invalidateSelf()
         rippleDrawable.invalidateSelf()
         background = rippleDrawable
+
 
 
     }

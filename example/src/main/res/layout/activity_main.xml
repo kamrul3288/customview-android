@@ -32,6 +32,7 @@
     <com.iamkamrul.button.ButtonRegular
         android:id="@+id/validateBtn"
         android:text="Validate"
+
         android:layout_margin="16dp"
         app:btn_background_color="@color/purple_200"
         app:btn_border_radius="10dp"
@@ -55,6 +56,36 @@
         android:layout_margin="16dp"
         android:layout_width="100dp"
         android:layout_height="100dp"/>
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:text="Hello"
+            android:button="@android:color/transparent"            app:rb_border_radius="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            app:rb_selected_text_color="@color/white"
+            app:rb_background_shape="oval"
+            app:rb_selected_bg_color="@color/purple_700"
+            app:rb_bg_color="@color/purple_200"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            app:rb_selected_text_color="@color/white"
+            app:rb_background_shape="oval"
+            app:rb_selected_bg_color="@color/purple_700"
+            app:rb_bg_color="@color/purple_200"
+            android:text="Hello"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </RadioGroup>
 
 
 </LinearLayout>
