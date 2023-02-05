@@ -9,7 +9,6 @@ import android.view.Gravity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.textfield.TextInputLayout
@@ -53,7 +52,8 @@ class TextInputLayout : TextInputLayout {
         errorIcon = typedArray.getDrawable(R.styleable.TextInputLayout_input_layout_error_icon)
         val errorTextColor = typedArray.getColor(R.styleable.TextInputLayout_input_layout_error_text_color,Color.RED)
         val errorTextSize = typedArray.getDimension(R.styleable.TextInputLayout_input_layout_error_text_size,12f)
-        val countryCode = CountryCode.values()[typedArray.getInt(R.styleable.TextInputLayout_phone_number_country_code,0)]
+        val countryCode = CountryCode.values()[typedArray.getInt(R.styleable.TextInputLayout_input_layout_phone_number_country_code,0)]
+        val passwordMinLength = PasswordMinLength.values()[typedArray.getInt(R.styleable.TextInputLayout_input_layout_password_min_length,0)]
 
         errorTextView = TextViewRegular(context)
         errorTextView.setTextColor(errorTextColor)
@@ -88,7 +88,7 @@ class TextInputLayout : TextInputLayout {
             setErrorTextAppearance(R.style.ErrorTextAppearance)
             errorIconDrawable = null
         }
-        Toast.makeText(context, validationType.toString(), Toast.LENGTH_SHORT).show()
+
         if (isValidationEnable){
             addOnEditTextAttachedListener {
                 editText?.doAfterTextChanged {
@@ -112,7 +112,7 @@ class TextInputLayout : TextInputLayout {
 
                         //------------password validation-----------------
                         if (validationType == InputValidationType.Password){
-                            if (it.length<6) setErrorText(errorMessage)
+                            if (it.length<passwordMinLength.length()) setErrorText(errorMessage)
                             else setErrorText(null)
                             return@let
                         }
@@ -135,5 +135,13 @@ class TextInputLayout : TextInputLayout {
         errorView.isVisible = text?.isNotEmpty() == true && errorIcon != null
         error = text
         errorTextView.text = text
+    }
+
+    private fun PasswordMinLength.length():Int{
+        return when(this){
+            PasswordMinLength.Five -> 5
+            PasswordMinLength.Six -> 6
+            PasswordMinLength.Eight -> 8
+        }
     }
 }

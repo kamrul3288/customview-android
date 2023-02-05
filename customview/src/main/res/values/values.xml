@@ -92,8 +92,15 @@
             <enum name="empty_check" value="3"/>
         </attr>
 
-        <attr name="phone_number_country_code" format="enum">
+
+        <attr name="input_layout_phone_number_country_code" format="enum">
             <enum name="BD" value="0"/>
+        </attr>
+
+        <attr name="input_layout_password_min_length" format="enum">
+            <enum name="five" value="0"/>
+            <enum name="six" value="1"/>
+            <enum name="eight" value="2"/>
         </attr>
 
         <attr name="input_layout_validation_enable" format="boolean"/>
