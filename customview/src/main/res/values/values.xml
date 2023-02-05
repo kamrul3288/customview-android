@@ -83,13 +83,19 @@
         </attr>
     </declare-styleable>
 
+
     <declare-styleable name="TextInputLayout">
-        <attr name="input_layout_validation_type">
-            <flag name="phone" value="1"/>
-            <flag name="email" value="2"/>
-            <flag name="password" value="3"/>
-            <flag name="empty_check" value="4"/>
+        <attr name="input_layout_validation_type" format="enum">
+            <enum name="phone" value="0"/>
+            <enum name="email" value="1"/>
+            <enum name="password" value="2"/>
+            <enum name="empty_check" value="3"/>
         </attr>
+
+        <attr name="phone_number_country_code" format="enum">
+            <enum name="BD" value="0"/>
+        </attr>
+
         <attr name="input_layout_validation_enable" format="boolean"/>
         <attr name="input_layout_error_message" format="string"/>
         <attr name="input_layout_error_text_color" format="color"/>

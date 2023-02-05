@@ -9,6 +9,7 @@ import android.view.Gravity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.textfield.TextInputLayout
@@ -16,7 +17,6 @@ import com.iamkamrul.R
 import com.iamkamrul.textview.TextViewRegular
 import com.iamkamrul.utils.FontsOverride
 import com.iamkamrul.utils.displayRatioValue
-
 class TextInputLayout : TextInputLayout {
     private lateinit var errorTextView: TextView
     private lateinit var errorView: LinearLayout
@@ -48,11 +48,12 @@ class TextInputLayout : TextInputLayout {
         //---------------validation-------------------------
         val typedArray = context.obtainStyledAttributes(attrs,R.styleable.TextInputLayout,0,0)
         val isValidationEnable = typedArray.getBoolean(R.styleable.TextInputLayout_input_layout_validation_enable,false)
-        val validationType = typedArray.getString(R.styleable.TextInputLayout_input_layout_validation_type)
-        val errorMessage = typedArray.getString(R.styleable.TextInputLayout_input_layout_error_message)
+        val validationType = InputValidationType.values()[typedArray.getInt(R.styleable.TextInputLayout_input_layout_validation_type,0)]
+        val errorMessage = typedArray.getString(R.styleable.TextInputLayout_input_layout_error_message)?:"NO_ERROR_MESSAGE_PROVIDED"
         errorIcon = typedArray.getDrawable(R.styleable.TextInputLayout_input_layout_error_icon)
         val errorTextColor = typedArray.getColor(R.styleable.TextInputLayout_input_layout_error_text_color,Color.RED)
         val errorTextSize = typedArray.getDimension(R.styleable.TextInputLayout_input_layout_error_text_size,12f)
+        val countryCode = CountryCode.values()[typedArray.getInt(R.styleable.TextInputLayout_phone_number_country_code,0)]
 
         errorTextView = TextViewRegular(context)
         errorTextView.setTextColor(errorTextColor)
@@ -82,42 +83,42 @@ class TextInputLayout : TextInputLayout {
         errorViewParams.topMargin = context.displayRatioValue(4)
         errorView.layoutParams = errorViewParams
 
-
-
-        if (errorIcon != null && !errorMessage.isNullOrEmpty()){
+        if (errorIcon != null){
             errorImageView.setImageDrawable(errorIcon)
             setErrorTextAppearance(R.style.ErrorTextAppearance)
             errorIconDrawable = null
         }
-
+        Toast.makeText(context, validationType.toString(), Toast.LENGTH_SHORT).show()
         if (isValidationEnable){
             addOnEditTextAttachedListener {
                 editText?.doAfterTextChanged {
                     it?.let {
 
                         //------------phone number validation-----------------
-                        if (validationType == "0x1" || validationType == "1"){
-                            if (it.length<10) setErrorText(errorMessage)
-                            else setErrorText(null)
+                        if (validationType == InputValidationType.Phone){
+                            if (countryCode == CountryCode.BD){
+                                if (it.length<10) setErrorText(errorMessage)
+                                else setErrorText(null)
+                            }
                             return@let
                         }
 
                         //------------email number validation-----------------
-                        if (validationType == "0x2" || validationType == "2"){//
+                        if (validationType == InputValidationType.Email){//
                             if (it.length<10) setErrorText(errorMessage)
                             else setErrorText(null)
                             return@let
                         }
 
                         //------------password validation-----------------
-                        if (validationType == "0x3" || validationType == "3"){
+                        if (validationType == InputValidationType.Password){
                             if (it.length<6) setErrorText(errorMessage)
                             else setErrorText(null)
                             return@let
                         }
 
                         //------------empty validation-----------------
-                        if (validationType == "0x4" || validationType == "4"){
+                        if (validationType == InputValidationType.EmptyCheck){
                             if (it.isEmpty()) setErrorText(errorMessage)
                             else setErrorText(null)
                             return@let
