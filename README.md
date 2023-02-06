@@ -1,4 +1,5 @@
-# Customview-android
+# Customview-android [![](https://jitpack.io/v/kamrul3288/customview-android.svg)](https://jitpack.io/#kamrul3288/customview-android)
+
 A simple library that helps to create differ type of shape and stroke without creating drawable file. Also collection of complex custom view
 
 ```gradle
@@ -11,7 +12,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```gradle
 dependencies {
-  implementation "com.github.kamrul3288:customview-android:1.0.1"
+  implementation "com.github.kamrul3288:customview-android:1.0.2"
 }
 ```
 
