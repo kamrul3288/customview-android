@@ -1,11 +1,11 @@
 package com.example.customview
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.customview.databinding.ActivityMainBinding
 import com.iamkamrul.utils.Shape
-import com.iamkamrul.utils.dp
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.validateBtn.setOnClickListener {
-            binding.exampleLL.setShape(
+        
+        binding.btn1.setOnClickListener {
+            binding.btn4.setShape(
                 backgroundColor = ContextCompat.getColor(applicationContext,R.color.teal_200),
-                backgroundShapeType = Shape.Rectangle,
-                backgroundBorderRadius = dp(10)
+                backgroundShapeType = Shape.Oval
             )
         }
     }

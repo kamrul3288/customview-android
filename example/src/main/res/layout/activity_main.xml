@@ -1,98 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:text="Button Example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.iamkamrul.button.ButtonRegular
+            android:id="@+id/btn1"
+            android:text="Click Me"
+            app:btn_background_color="@color/purple_200"
+            app:btn_background_shape="rectangle"
+            app:btn_border_radius="10dp"
+            android:layout_width="100dp"
+            android:layout_height="80dp"/>
+
+
+        <com.iamkamrul.button.ButtonRegular
+            app:btn_background_color="@color/purple_200"
+            app:btn_background_shape="oval"
+            app:btn_border_radius="10dp"
+            android:text="Click Me"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <com.iamkamrul.button.ButtonRegular
+            app:btn_background_shape="stroke"
+            app:btn_stroke_color="@color/purple_200"
+            app:btn_stroke_width="2dp"
+            android:text="Click Me"
+            app:btn_border_radius="10dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+
+        <com.iamkamrul.button.ButtonRegular
+            android:id="@+id/btn4"
+            app:btn_background_shape="stroke_circle"
+            app:btn_stroke_color="@color/purple_200"
+            app:btn_stroke_width="2dp"
+            android:text="Click Me"
+            app:btn_border_radius="10dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Textview Example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.iamkamrul.textview.TextViewRegular
+            android:text="Hello"
+            android:gravity="center"
+            app:tv_background_color="@color/purple_700"
+            app:tv_border_radius="10dp"
+            android:textColor="@color/white"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:text="Edit Text Example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <com.iamkamrul.input.TextInputLayout
-        android:id="@+id/exampleIL"
-        app:input_layout_error_icon="@drawable/ic_launcher_background"
         app:input_layout_validation_enable="true"
         app:input_layout_validation_type="password"
-        app:input_layout_error_message="Hello"
         app:input_layout_password_min_length="six"
-        app:input_layout_phone_number_country_code="BD"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:input_layout_error_message="Please provide 6 char password"
+        app:input_layout_error_icon="@mipmap/ic_launcher"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp">
+        android:layout_height="wrap_content">
 
         <com.iamkamrul.input.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
     </com.iamkamrul.input.TextInputLayout>
 
-    <com.iamkamrul.button.ButtonRegular
-        android:id="@+id/validateBtn"
-        android:text="Validate"
-
-        android:layout_margin="16dp"
-        app:btn_background_color="@color/purple_200"
-        app:btn_border_radius="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-
-    <com.iamkamrul.textview.TextViewRegular
+    <TextView
         android:layout_marginTop="16dp"
-        app:tv_stroke_width="1dp"
-        app:tv_stroke_color="@color/black"
-        app:tv_background_shape="stroke_circle"
-        android:text="Hello"
-        android:gravity="center"
-        android:layout_width="120dp"
-        android:layout_height="120dp"/>
-
-    <com.iamkamrul.view.View
-        app:view_background_color="@color/black"
-        app:view_background_shape="oval"
-        android:layout_margin="16dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:text="Radio Example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <RadioGroup
         android:orientation="horizontal"
-        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.iamkamrul.radio.RadioButtonRegular
-            android:text="Hello"
-            android:button="@android:color/transparent"            app:rb_border_radius="10dp"
-            android:layout_marginEnd="10dp"
-            android:gravity="center"
+            android:id="@+id/maleRb"
+            app:rb_bg_color="@color/teal_200"
+            app:rb_border_radius="10dp"
+            app:rb_selected_bg_color="@color/teal_700"
             app:rb_selected_text_color="@color/white"
-            app:rb_background_shape="oval"
-            app:rb_selected_bg_color="@color/purple_700"
-            app:rb_bg_color="@color/purple_200"
-            android:layout_width="100dp"
-            android:layout_height="100dp"/>
-
-        <com.iamkamrul.radio.RadioButtonRegular
             android:button="@android:color/transparent"
             android:gravity="center"
+            android:checked="true"
+            android:text="Male"
+            android:layout_width="102dp"
+            android:layout_height="45dp"/>
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/femaleRb"
+            android:layout_marginStart="16dp"
+            app:rb_bg_color="@color/teal_200"
+            app:rb_border_radius="10dp"
+            app:rb_selected_bg_color="@color/teal_700"
             app:rb_selected_text_color="@color/white"
-            app:rb_background_shape="oval"
-            app:rb_selected_bg_color="@color/purple_700"
-            app:rb_bg_color="@color/purple_200"
-            android:text="Hello"
-            android:layout_width="100dp"
-            android:layout_height="100dp"/>
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="FeMale"
+            android:layout_width="102dp"
+            android:layout_height="45dp"/>
+
     </RadioGroup>
 
-    <com.iamkamrul.layout.LinearLayout
-        android:id="@+id/exampleLL"
-        app:ll_background_color="@color/purple_200"
-        app:ll_background_shape="rectangle"
-        app:ll_border_radius="10dp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"/>
+    <TextView
+        android:layout_marginTop="16dp"
+        android:text="Cons Example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.iamkamrul.layout.ConstraintLayout
+        android:id="@+id/btnCl"
+        app:cl_ripple_color="@color/teal_200"
+        app:cl_background_color="@color/purple_700"
+        app:cl_border_radius="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <com.iamkamrul.textview.TextViewBold
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="@+id/tv1"
+            app:layout_constraintEnd_toStartOf="@+id/tv1"
+            app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+    </com.iamkamrul.layout.ConstraintLayout>
 
 </LinearLayout>
