@@ -23,6 +23,7 @@
         <attr name="btn_stroke_width" format="dimension"/>
         <attr name="btn_ripple_color" format="color"/>
         <attr name="btn_disable_color" format="color"/>
+        <attr name="btn_disable_text_color" format="color"/>
 
         <attr name="btn_background_shape" format="enum">
             <enum name="stroke" value="0"/>
@@ -120,6 +121,7 @@
         <attr name="rb_disable_color" format="color"/>
         <attr name="rb_text_color" format="color"/>
         <attr name="rb_selected_text_color" format="color"/>
+        <attr name="rb_selected_stroke_color" format="color"/>
 
         <attr name="rb_background_shape" format="enum">
             <enum name="stroke" value="0"/>

@@ -8,6 +8,7 @@
     tools:context=".MainActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <TextView
         android:text="Button Example"
         android:layout_width="wrap_content"
@@ -21,6 +22,8 @@
         <com.iamkamrul.button.ButtonRegular
             android:id="@+id/btn1"
             android:text="Click Me"
+            android:enabled="false"
+            app:btn_disable_text_color="@color/teal_200"
             app:btn_background_color="@color/purple_200"
             app:btn_background_shape="rectangle"
             app:btn_border_radius="10dp"
@@ -114,13 +117,14 @@
 
         <com.iamkamrul.radio.RadioButtonRegular
             android:id="@+id/maleRb"
-            app:rb_bg_color="@color/teal_200"
             app:rb_border_radius="10dp"
+            app:rb_background_shape="stroke"
+            app:rb_stroke_width="2dp"
+            app:rb_stroke_color="@color/black"
             app:rb_selected_bg_color="@color/teal_700"
             app:rb_selected_text_color="@color/white"
             android:button="@android:color/transparent"
             android:gravity="center"
-            android:checked="true"
             android:text="Male"
             android:layout_width="102dp"
             android:layout_height="45dp"/>
@@ -128,7 +132,9 @@
         <com.iamkamrul.radio.RadioButtonRegular
             android:id="@+id/femaleRb"
             android:layout_marginStart="16dp"
-            app:rb_bg_color="@color/teal_200"
+            app:rb_background_shape="stroke"
+            app:rb_stroke_width="2dp"
+            app:rb_stroke_color="@color/black"
             app:rb_border_radius="10dp"
             app:rb_selected_bg_color="@color/teal_700"
             app:rb_selected_text_color="@color/white"

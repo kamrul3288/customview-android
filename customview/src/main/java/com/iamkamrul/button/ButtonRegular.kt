@@ -39,6 +39,7 @@ open class ButtonRegular : AppCompatButton {
         val strokeWithSize = typedArray.getDimension(R.styleable.ButtonRegular_btn_stroke_width,0f)
         val backgroundRippleColor = typedArray.getColor(R.styleable.ButtonRegular_btn_ripple_color, Color.LTGRAY)
         val backgroundDisableColor = typedArray.getColor(R.styleable.ButtonRegular_btn_disable_color, Color.GRAY)
+        val disableTextColor = typedArray.getColor(R.styleable.ButtonRegular_btn_disable_text_color, Color.DKGRAY)
         typedArray.recycle()
 
 
@@ -50,6 +51,7 @@ open class ButtonRegular : AppCompatButton {
             strokeWithSize = strokeWithSize,
             backgroundRippleColor = backgroundRippleColor,
             backgroundDisableColor = backgroundDisableColor,
+            disableTextColor = disableTextColor
         )
 
     }
@@ -62,7 +64,18 @@ open class ButtonRegular : AppCompatButton {
         @Dimension strokeWithSize:Float = 0f,
         @ColorInt backgroundRippleColor:Int = Color.LTGRAY,
         @ColorInt backgroundDisableColor:Int = Color.GRAY,
+        @ColorInt disableTextColor:Int = Color.DKGRAY,
     ){
+
+        setTextColor(ColorStateList(
+            arrayOf(
+                intArrayOf(-android.R.attr.state_enabled)
+            ),
+            intArrayOf(
+                disableTextColor
+            )
+        ))
+
         val drawableBuilder = GradientDrawable()
         val contentColor = ColorStateList(
             arrayOf(

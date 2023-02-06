@@ -94,6 +94,14 @@ class TextInputLayout : TextInputLayout {
                 editText?.doAfterTextChanged {
                     it?.let {
 
+                        //------------empty validation-----------------
+                        if (validationType == InputValidationType.EmptyCheck){
+                            if (it.isEmpty()) setErrorText(errorMessage)
+                            else setErrorText(null)
+                            return@let
+                        }
+
+                        if (it.isEmpty()) return@let
                         //------------phone number validation-----------------
                         if (validationType == InputValidationType.Phone){
                             if (countryCode == CountryCode.BD){
@@ -113,13 +121,6 @@ class TextInputLayout : TextInputLayout {
                         //------------password validation-----------------
                         if (validationType == InputValidationType.Password){
                             if (it.length<passwordMinLength.length()) setErrorText(errorMessage)
-                            else setErrorText(null)
-                            return@let
-                        }
-
-                        //------------empty validation-----------------
-                        if (validationType == InputValidationType.EmptyCheck){
-                            if (it.isEmpty()) setErrorText(errorMessage)
                             else setErrorText(null)
                             return@let
                         }

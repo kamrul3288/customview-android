@@ -1,7 +1,6 @@
 package com.example.customview
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.customview.databinding.ActivityMainBinding
@@ -21,6 +20,7 @@ class MainActivity : AppCompatActivity() {
                 backgroundColor = ContextCompat.getColor(applicationContext,R.color.teal_200),
                 backgroundShapeType = Shape.Oval
             )
+
         }
     }
 }
