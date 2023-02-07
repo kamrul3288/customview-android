@@ -69,10 +69,14 @@ open class ButtonRegular : AppCompatButton {
 
         setTextColor(ColorStateList(
             arrayOf(
+                intArrayOf(android.R.attr.state_activated),
+                intArrayOf(android.R.attr.state_enabled),
                 intArrayOf(-android.R.attr.state_enabled)
             ),
             intArrayOf(
-                disableTextColor
+                this.currentTextColor,
+                this.currentTextColor,
+                disableTextColor,
             )
         ))
 

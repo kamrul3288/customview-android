@@ -22,8 +22,7 @@
         <com.iamkamrul.button.ButtonRegular
             android:id="@+id/btn1"
             android:text="Click Me"
-            android:enabled="false"
-            app:btn_disable_text_color="@color/teal_200"
+            android:textColor="@color/teal_200"
             app:btn_background_color="@color/purple_200"
             app:btn_background_shape="rectangle"
             app:btn_border_radius="10dp"
