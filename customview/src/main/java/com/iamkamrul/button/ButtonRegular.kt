@@ -10,11 +10,12 @@ import android.util.AttributeSet
 import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
 import androidx.appcompat.widget.AppCompatButton
+import com.google.android.material.button.MaterialButton
 import com.iamkamrul.R
 import com.iamkamrul.utils.FontsOverride
 import com.iamkamrul.utils.Shape
 
-open class ButtonRegular : AppCompatButton {
+open class ButtonRegular : MaterialButton {
 
     constructor(context: Context) : super(context){
         applyCustomFont()

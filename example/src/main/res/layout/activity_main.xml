@@ -151,8 +151,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <com.iamkamrul.button.ButtonRegular
+        app:btn_background_color="@color/purple_700"
+        app:btn_border_radius="20dp"
+        android:text="Hello"
+        app:icon="@drawable/baseline_add_24"
+        app:iconGravity="textEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <com.iamkamrul.layout.ConstraintLayout
         android:id="@+id/btnCl"
+        android:layout_marginTop="10dp"
         app:cl_ripple_color="@color/teal_200"
         app:cl_background_color="@color/purple_700"
         app:cl_border_radius="20dp"
