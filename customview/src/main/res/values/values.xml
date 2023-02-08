@@ -33,6 +33,22 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="MaterialButtonRegular">
+        <attr name="mt_btn_background_color" format="color"/>
+        <attr name="mt_btn_border_radius" format="dimension"/>
+        <attr name="mt_btn_stroke_color" format="color"/>
+        <attr name="mt_btn_stroke_width" format="dimension"/>
+        <attr name="mt_btn_ripple_color" format="color"/>
+        <attr name="mt_btn_disable_color" format="color"/>
+        <attr name="mt_btn_disable_text_color" format="color"/>
+
+        <attr name="mt_btn_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
+        </attr>
+    </declare-styleable>
 
     <declare-styleable name="LinearLayout">
         <attr name="ll_background_color" format="color"/>

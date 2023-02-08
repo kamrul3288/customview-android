@@ -15,7 +15,7 @@ import com.iamkamrul.R
 import com.iamkamrul.utils.FontsOverride
 import com.iamkamrul.utils.Shape
 
-open class ButtonRegular : AppCompatButton {
+open class MaterialButtonRegular : MaterialButton {
 
     constructor(context: Context) : super(context){
         applyCustomFont()
@@ -32,15 +32,15 @@ open class ButtonRegular : AppCompatButton {
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ButtonRegular,0,0)
-        val backgroundColor = typedArray.getColor(R.styleable.ButtonRegular_btn_background_color, Color.TRANSPARENT)
-        val backgroundBorderRadius = typedArray.getDimension(R.styleable.ButtonRegular_btn_border_radius,0f)
-        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.ButtonRegular_btn_background_shape,1)]
-        val strokeColor = typedArray.getColor(R.styleable.ButtonRegular_btn_stroke_color, Color.TRANSPARENT)
-        val strokeWithSize = typedArray.getDimension(R.styleable.ButtonRegular_btn_stroke_width,0f)
-        val backgroundRippleColor = typedArray.getColor(R.styleable.ButtonRegular_btn_ripple_color, Color.LTGRAY)
-        val backgroundDisableColor = typedArray.getColor(R.styleable.ButtonRegular_btn_disable_color, Color.GRAY)
-        val disableTextColor = typedArray.getColor(R.styleable.ButtonRegular_btn_disable_text_color, Color.DKGRAY)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialButtonRegular,0,0)
+        val backgroundColor = typedArray.getColor(R.styleable.MaterialButtonRegular_mt_btn_background_color, Color.TRANSPARENT)
+        val backgroundBorderRadius = typedArray.getDimension(R.styleable.MaterialButtonRegular_mt_btn_border_radius,0f)
+        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.MaterialButtonRegular_mt_btn_background_shape,1)]
+        val strokeColor = typedArray.getColor(R.styleable.MaterialButtonRegular_mt_btn_stroke_color, Color.TRANSPARENT)
+        val strokeWithSize = typedArray.getDimension(R.styleable.MaterialButtonRegular_mt_btn_stroke_width,0f)
+        val backgroundRippleColor = typedArray.getColor(R.styleable.MaterialButtonRegular_mt_btn_ripple_color, Color.LTGRAY)
+        val backgroundDisableColor = typedArray.getColor(R.styleable.MaterialButtonRegular_mt_btn_disable_color, Color.GRAY)
+        val disableTextColor = typedArray.getColor(R.styleable.MaterialButtonRegular_mt_btn_disable_text_color, Color.DKGRAY)
         typedArray.recycle()
 
 
@@ -66,8 +66,9 @@ open class ButtonRegular : AppCompatButton {
         @ColorInt backgroundRippleColor:Int = Color.LTGRAY,
         @ColorInt backgroundDisableColor:Int = Color.GRAY,
         @ColorInt disableTextColor:Int = Color.DKGRAY,
-    ){z
+    ){
 
+        this.backgroundTintList = null
         setTextColor(ColorStateList(
             arrayOf(
                 intArrayOf(android.R.attr.state_activated),
