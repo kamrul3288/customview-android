@@ -66,7 +66,21 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="FrameLayout">
+        <attr name="fl_background_color" format="color"/>
+        <attr name="fl_border_radius" format="dimension"/>
+        <attr name="fl_stroke_color" format="color"/>
+        <attr name="fl_stroke_width" format="dimension"/>
+        <attr name="fl_ripple_color" format="color"/>
+        <attr name="fl_disable_color" format="color"/>
 
+        <attr name="fl_background_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
+        </attr>
+    </declare-styleable>
 
     <declare-styleable name="ConstraintLayout">
         <attr name="cl_background_color" format="color"/>

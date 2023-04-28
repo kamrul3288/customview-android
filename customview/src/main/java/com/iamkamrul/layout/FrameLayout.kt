@@ -7,13 +7,13 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
+import android.widget.FrameLayout
 import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
-import androidx.appcompat.widget.LinearLayoutCompat
 import com.iamkamrul.customview.R
 import com.iamkamrul.utils.Shape
 
-open class LinearLayout : LinearLayoutCompat{
+open class FrameLayout : FrameLayout{
 
     constructor(context: Context) : super(context)
 
@@ -25,14 +25,14 @@ open class LinearLayout : LinearLayoutCompat{
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LinearLayout,0,0)
-        val backgroundColor = typedArray.getColor(R.styleable.LinearLayout_ll_background_color, Color.TRANSPARENT)
-        val backgroundBorderRadius = typedArray.getDimension(R.styleable.LinearLayout_ll_border_radius,0f)
-        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.LinearLayout_ll_background_shape,1)]
-        val strokeColor = typedArray.getColor(R.styleable.LinearLayout_ll_stroke_color, Color.TRANSPARENT)
-        val strokeWithSize = typedArray.getDimension(R.styleable.LinearLayout_ll_stroke_width,0f)
-        val backgroundRippleColor = typedArray.getColor(R.styleable.LinearLayout_ll_ripple_color, Color.LTGRAY)
-        val backgroundDisableColor = typedArray.getColor(R.styleable.LinearLayout_ll_disable_color, Color.GRAY)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.FrameLayout,0,0)
+        val backgroundColor = typedArray.getColor(R.styleable.FrameLayout_fl_background_color, Color.TRANSPARENT)
+        val backgroundBorderRadius = typedArray.getDimension(R.styleable.FrameLayout_fl_border_radius,0f)
+        val backgroundShapeType = Shape.values()[typedArray.getInt(R.styleable.FrameLayout_fl_background_shape,1)]
+        val strokeColor = typedArray.getColor(R.styleable.FrameLayout_fl_stroke_color, Color.TRANSPARENT)
+        val strokeWithSize = typedArray.getDimension(R.styleable.FrameLayout_fl_stroke_width,0f)
+        val backgroundRippleColor = typedArray.getColor(R.styleable.FrameLayout_fl_ripple_color, Color.LTGRAY)
+        val backgroundDisableColor = typedArray.getColor(R.styleable.FrameLayout_fl_disable_color, Color.GRAY)
         typedArray.recycle()
 
         setShape(
