@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.textfield.TextInputLayout
-import com.iamkamrul.R
+import com.iamkamrul.customview.R
 import com.iamkamrul.textview.TextViewRegular
 import com.iamkamrul.utils.FontsOverride
 import com.iamkamrul.utils.displayRatioValue
@@ -45,7 +45,7 @@ class TextInputLayout : TextInputLayout {
     private fun applyAttribute(attrs: AttributeSet, context: Context){
 
         //---------------validation-------------------------
-        val typedArray = context.obtainStyledAttributes(attrs,R.styleable.TextInputLayout,0,0)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextInputLayout,0,0)
         val isValidationEnable = typedArray.getBoolean(R.styleable.TextInputLayout_input_layout_validation_enable,false)
         val validationType = InputValidationType.values()[typedArray.getInt(R.styleable.TextInputLayout_input_layout_validation_type,0)]
         val errorMessage = typedArray.getString(R.styleable.TextInputLayout_input_layout_error_message)?:"NO_ERROR_MESSAGE_PROVIDED"

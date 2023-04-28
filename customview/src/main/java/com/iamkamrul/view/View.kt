@@ -7,10 +7,10 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
-import com.iamkamrul.R
 import android.view.View
 import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
+import com.iamkamrul.customview.R
 import com.iamkamrul.utils.Shape
 
 open class View : View {
