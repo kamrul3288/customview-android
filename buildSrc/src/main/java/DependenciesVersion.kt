@@ -6,8 +6,6 @@ object DependenciesVersion {
     const val card_view_version = "1.0.0"
     const val activity_version = "1.7.1"
     const val fragment_version = "1.5.7"
-    const val lottie_version = "5.2.0"
-    const val navigationVersion = "2.5.2"
 
     const val junit_version = "4.13.2"
     const val junit_ext_version = "1.1.3"
