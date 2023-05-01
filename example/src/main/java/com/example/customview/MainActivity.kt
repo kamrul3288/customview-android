@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Date
-        
+
         binding.btn1.setOnClickListener {
             binding.btn4.setShape(
                 backgroundColor = ContextCompat.getColor(applicationContext,R.color.teal_200),
