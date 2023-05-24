@@ -7,7 +7,10 @@ fun Context.displayRatioValue(value:Int):Int{
     return (value * dpRatio).toInt()
 }
 
-fun Context.dp(value:Int):Float{
-    val dpRatio: Float = resources.displayMetrics.density
-    return (value * dpRatio)
+fun Context.dp(value:Float):Float{
+    return if (value>0){
+        val dpRatio: Float = resources.displayMetrics.density
+        (value * dpRatio)
+    }else 0f
+
 }

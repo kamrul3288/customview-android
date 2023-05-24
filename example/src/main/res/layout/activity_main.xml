@@ -10,7 +10,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <TextView
+    <com.iamkamrul.textview.TextViewBold
         android:text="Button Example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -60,10 +60,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:text="Textview Example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_marginTop="16dp"
@@ -72,14 +68,17 @@
         android:layout_height="wrap_content">
 
 
+
         <com.iamkamrul.textview.TextViewRegular
+            android:id="@+id/helloTv"
             android:text="Hello"
+            app:tv_ripple_color="@color/teal_200"
             android:gravity="center"
-            app:tv_background_color="@color/purple_700"
-            app:tv_border_radius="10dp"
-            android:textColor="@color/white"
+            app:tv_background_shape="rectangle"
+            android:background="@color/teal_700"
+            app:tv_topRight_corner_radius="15dp"
             android:layout_width="80dp"
-            android:layout_height="40dp"/>
+            android:layout_height="80dp"/>
 
     </LinearLayout>
 

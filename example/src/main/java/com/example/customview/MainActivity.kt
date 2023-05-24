@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
             )
 
         }
+
+        binding.helloTv.setOnClickListener {
+
+        }
     }
 }

@@ -7,8 +7,6 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.util.AttributeSet
-import androidx.annotation.ColorInt
-import androidx.annotation.Dimension
 import androidx.appcompat.widget.AppCompatRadioButton
 import com.iamkamrul.customview.R
 import com.iamkamrul.utils.FontsOverride
