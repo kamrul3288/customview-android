@@ -105,18 +105,35 @@
     </declare-styleable>
 
     <declare-styleable name="LinearLayout">
-        <attr name="ll_background_color" format="color"/>
-        <attr name="ll_border_radius" format="dimension"/>
+        <attr name="ll_corner_radius" format="dimension"/>
+        <attr name="ll_topLeft_corner_radius" format="dimension"/>
+        <attr name="ll_topRight_corner_radius" format="dimension"/>
+        <attr name="ll_bottomLeft_corner_radius" format="dimension"/>
+        <attr name="ll_bottomRight_corner_radius" format="dimension"/>
         <attr name="ll_stroke_color" format="color"/>
         <attr name="ll_stroke_width" format="dimension"/>
+        <attr name="ll_disable_bg_color" format="color"/>
+        <attr name="ll_gradient_top_color" format="color"/>
+        <attr name="ll_gradient_middle_color" format="color"/>
+        <attr name="ll_gradient_bottom_color" format="color"/>
         <attr name="ll_ripple_color" format="color"/>
-        <attr name="ll_disable_color" format="color"/>
 
         <attr name="ll_background_shape" format="enum">
             <enum name="stroke" value="0"/>
             <enum name="rectangle" value="1"/>
             <enum name="oval" value="2"/>
             <enum name="stroke_circle" value="3"/>
+        </attr>
+
+        <attr name="ll_gradient_orientation" format="enum">
+            <enum name="BL_TR" value="0"/>
+            <enum name="TL_BR" value="1"/>
+            <enum name="BR_TL" value="2"/>
+            <enum name="BOTTOM_TOP" value="3"/>
+            <enum name="TOP_BOTTOM" value="4"/>
+            <enum name="LEFT_RIGHT" value="5"/>
+            <enum name="RIGHT_LEFT" value="6"/>
+            <enum name="TR_BL" value="7"/>
         </attr>
     </declare-styleable>
 
