@@ -86,7 +86,6 @@ open class TextViewRegular : AppCompatTextView{
 
             //--------------check which drawable is are-----------------
             when (background) {
-
                 is GradientDrawable -> {
                     drawableBuilder = background as GradientDrawable
                     //--------disable color only support Android N or above
@@ -105,9 +104,9 @@ open class TextViewRegular : AppCompatTextView{
                 }
 
                 else ->{
+                    drawableBuilder = GradientDrawable()
                     //----------- check user is request for any gradient background color or not------------------
                     if (attrGradientTopColor != -1){
-                        drawableBuilder = GradientDrawable()
                         drawableBuilder?.color = getBgColorStateList()
                         //----------- set gradient color bg------------------
                         drawableBuilder?.colors = intArrayOf(
@@ -116,8 +115,8 @@ open class TextViewRegular : AppCompatTextView{
                             if (attrGradientBottomColor == -1)attrGradientTopColor else attrGradientBottomColor
                         )
                         drawableBuilder?.orientation = getDrawableOrientation()
-                        applyShape()
                     }
+                    applyShape()
                 }
             }
         }

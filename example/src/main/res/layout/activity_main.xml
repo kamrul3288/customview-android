@@ -72,10 +72,9 @@
         <com.iamkamrul.textview.TextViewRegular
             android:id="@+id/helloTv"
             android:text="Hello"
-            app:tv_ripple_color="@color/teal_200"
             android:gravity="center"
             app:tv_background_shape="rectangle"
-            android:background="@color/teal_700"
+            android:background="@color/purple_700"
             app:tv_topRight_corner_radius="15dp"
             android:layout_width="80dp"
             android:layout_height="80dp"/>
