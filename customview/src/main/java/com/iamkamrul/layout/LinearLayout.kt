@@ -57,7 +57,7 @@ open class LinearLayout : LinearLayoutCompat{
         attrGradientTopColor = typedArray.getColor(R.styleable.LinearLayout_ll_gradient_top_color,-1)
         attrGradientMiddleColor = typedArray.getColor(R.styleable.LinearLayout_ll_gradient_middle_color,-1)
         attrGradientBottomColor = typedArray.getColor(R.styleable.LinearLayout_ll_gradient_bottom_color,-1)
-        attrRippleColor = typedArray.getColor(R.styleable.LinearLayout_ll_ripple_color,Color.LTGRAY)
+        attrRippleColor = typedArray.getColor(R.styleable.LinearLayout_ll_ripple_color,Color.TRANSPARENT)
         typedArray.recycle()
 
         //--------------check user select any shape type or not-----------------

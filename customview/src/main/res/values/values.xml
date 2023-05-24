@@ -138,12 +138,18 @@
     </declare-styleable>
 
     <declare-styleable name="FrameLayout">
-        <attr name="fl_background_color" format="color"/>
-        <attr name="fl_border_radius" format="dimension"/>
+        <attr name="fl_corner_radius" format="dimension"/>
+        <attr name="fl_topLeft_corner_radius" format="dimension"/>
+        <attr name="fl_topRight_corner_radius" format="dimension"/>
+        <attr name="fl_bottomLeft_corner_radius" format="dimension"/>
+        <attr name="fl_bottomRight_corner_radius" format="dimension"/>
         <attr name="fl_stroke_color" format="color"/>
         <attr name="fl_stroke_width" format="dimension"/>
+        <attr name="fl_disable_bg_color" format="color"/>
+        <attr name="fl_gradient_top_color" format="color"/>
+        <attr name="fl_gradient_middle_color" format="color"/>
+        <attr name="fl_gradient_bottom_color" format="color"/>
         <attr name="fl_ripple_color" format="color"/>
-        <attr name="fl_disable_color" format="color"/>
 
         <attr name="fl_background_shape" format="enum">
             <enum name="stroke" value="0"/>
@@ -151,21 +157,49 @@
             <enum name="oval" value="2"/>
             <enum name="stroke_circle" value="3"/>
         </attr>
+
+        <attr name="fl_gradient_orientation" format="enum">
+            <enum name="BL_TR" value="0"/>
+            <enum name="TL_BR" value="1"/>
+            <enum name="BR_TL" value="2"/>
+            <enum name="BOTTOM_TOP" value="3"/>
+            <enum name="TOP_BOTTOM" value="4"/>
+            <enum name="LEFT_RIGHT" value="5"/>
+            <enum name="RIGHT_LEFT" value="6"/>
+            <enum name="TR_BL" value="7"/>
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="ConstraintLayout">
-        <attr name="cl_background_color" format="color"/>
-        <attr name="cl_border_radius" format="dimension"/>
+        <attr name="cl_corner_radius" format="dimension"/>
+        <attr name="cl_topLeft_corner_radius" format="dimension"/>
+        <attr name="cl_topRight_corner_radius" format="dimension"/>
+        <attr name="cl_bottomLeft_corner_radius" format="dimension"/>
+        <attr name="cl_bottomRight_corner_radius" format="dimension"/>
         <attr name="cl_stroke_color" format="color"/>
         <attr name="cl_stroke_width" format="dimension"/>
+        <attr name="cl_disable_bg_color" format="color"/>
+        <attr name="cl_gradient_top_color" format="color"/>
+        <attr name="cl_gradient_middle_color" format="color"/>
+        <attr name="cl_gradient_bottom_color" format="color"/>
         <attr name="cl_ripple_color" format="color"/>
-        <attr name="cl_disable_color" format="color"/>
 
         <attr name="cl_background_shape" format="enum">
             <enum name="stroke" value="0"/>
             <enum name="rectangle" value="1"/>
             <enum name="oval" value="2"/>
             <enum name="stroke_circle" value="3"/>
+        </attr>
+
+        <attr name="cl_gradient_orientation" format="enum">
+            <enum name="BL_TR" value="0"/>
+            <enum name="TL_BR" value="1"/>
+            <enum name="BR_TL" value="2"/>
+            <enum name="BOTTOM_TOP" value="3"/>
+            <enum name="TOP_BOTTOM" value="4"/>
+            <enum name="LEFT_RIGHT" value="5"/>
+            <enum name="RIGHT_LEFT" value="6"/>
+            <enum name="TR_BL" value="7"/>
         </attr>
     </declare-styleable>
 
