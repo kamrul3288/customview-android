@@ -36,13 +36,19 @@
     </declare-styleable>
 
     <declare-styleable name="ButtonRegular">
-        <attr name="btn_background_color" format="color"/>
-        <attr name="btn_border_radius" format="dimension"/>
+        <attr name="btn_corner_radius" format="dimension"/>
+        <attr name="btn_topLeft_corner_radius" format="dimension"/>
+        <attr name="btn_topRight_corner_radius" format="dimension"/>
+        <attr name="btn_bottomLeft_corner_radius" format="dimension"/>
+        <attr name="btn_bottomRight_corner_radius" format="dimension"/>
         <attr name="btn_stroke_color" format="color"/>
         <attr name="btn_stroke_width" format="dimension"/>
-        <attr name="btn_ripple_color" format="color"/>
-        <attr name="btn_disable_color" format="color"/>
+        <attr name="btn_disable_bg_color" format="color"/>
         <attr name="btn_disable_text_color" format="color"/>
+        <attr name="btn_gradient_top_color" format="color"/>
+        <attr name="btn_gradient_middle_color" format="color"/>
+        <attr name="btn_gradient_bottom_color" format="color"/>
+        <attr name="btn_ripple_color" format="color"/>
 
         <attr name="btn_background_shape" format="enum">
             <enum name="stroke" value="0"/>
@@ -50,6 +56,18 @@
             <enum name="oval" value="2"/>
             <enum name="stroke_circle" value="3"/>
         </attr>
+
+        <attr name="btn_gradient_orientation" format="enum">
+            <enum name="BL_TR" value="0"/>
+            <enum name="TL_BR" value="1"/>
+            <enum name="BR_TL" value="2"/>
+            <enum name="BOTTOM_TOP" value="3"/>
+            <enum name="TOP_BOTTOM" value="4"/>
+            <enum name="LEFT_RIGHT" value="5"/>
+            <enum name="RIGHT_LEFT" value="6"/>
+            <enum name="TR_BL" value="7"/>
+        </attr>
+
     </declare-styleable>
 
     <declare-styleable name="MaterialButtonRegular">

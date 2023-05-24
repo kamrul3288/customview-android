@@ -16,10 +16,6 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btn1.setOnClickListener {
-            binding.btn4.setShape(
-                backgroundColor = ContextCompat.getColor(applicationContext,R.color.teal_200),
-                backgroundShapeType = Shape.Oval
-            )
 
         }
 

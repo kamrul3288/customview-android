@@ -10,76 +10,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <com.iamkamrul.textview.TextViewBold
+    <com.iamkamrul.textview.TextViewRegular
+        android:id="@+id/helloTv"
+        android:text="Text View Example"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:tv_background_shape="rectangle"
+        android:background="@color/purple_700"
+        app:tv_topRight_corner_radius="15dp"
+        android:layout_width="180dp"
+        android:layout_height="40dp"/>
+
+
+    <com.iamkamrul.button.ButtonRegular
+        android:id="@+id/btn1"
+        android:layout_marginTop="20dp"
         android:text="Button Example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:btn_background_shape="rectangle"
+        app:btn_gradient_top_color="@color/teal_700"
+        app:btn_gradient_middle_color="@color/purple_200"
+        app:btn_gradient_bottom_color="@color/teal_200"
+        app:btn_gradient_orientation="LEFT_RIGHT"
+        app:btn_corner_radius="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"/>
 
-        <com.iamkamrul.button.ButtonRegular
-            android:id="@+id/btn1"
-            android:text="Click Me"
-            android:textColor="@color/teal_200"
-            app:btn_background_color="@color/purple_200"
-            app:btn_background_shape="rectangle"
-            app:btn_border_radius="10dp"
-            android:layout_width="100dp"
-            android:layout_height="80dp"/>
-
-
-        <com.iamkamrul.button.ButtonRegular
-            app:btn_background_color="@color/purple_200"
-            app:btn_background_shape="oval"
-            app:btn_border_radius="10dp"
-            android:text="Click Me"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-        <com.iamkamrul.button.ButtonRegular
-            app:btn_background_shape="stroke"
-            app:btn_stroke_color="@color/purple_200"
-            app:btn_stroke_width="2dp"
-            android:text="Click Me"
-            app:btn_border_radius="10dp"
-            android:layout_width="80dp"
-            android:layout_height="40dp"/>
-
-        <com.iamkamrul.button.ButtonRegular
-            android:id="@+id/btn4"
-            app:btn_background_shape="stroke_circle"
-            app:btn_stroke_color="@color/purple_200"
-            app:btn_stroke_width="2dp"
-            android:text="Click Me"
-            app:btn_border_radius="10dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-        <com.iamkamrul.textview.TextViewRegular
-            android:id="@+id/helloTv"
-            android:text="Hello"
-            android:gravity="center"
-            app:tv_background_shape="rectangle"
-            android:background="@color/purple_700"
-            app:tv_topRight_corner_radius="15dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-    </LinearLayout>
 
     <TextView
         android:layout_marginTop="16dp"
