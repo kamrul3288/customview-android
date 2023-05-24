@@ -75,6 +75,14 @@
 
     </com.iamkamrul.layout.LinearLayout>
 
+    <com.iamkamrul.view.View
+        app:view_background_shape="rectangle"
+        app:view_corner_radius="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/purple_200"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
 
 <!--    <TextView-->
 <!--        android:layout_marginTop="16dp"-->
