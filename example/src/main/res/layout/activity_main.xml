@@ -109,108 +109,12 @@
 
   </RadioGroup>
 
-
-<!--    <TextView-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="Edit Text Example"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"/>-->
-
-<!--    <com.iamkamrul.input.TextInputLayout-->
-<!--        app:input_layout_validation_enable="true"-->
-<!--        app:input_layout_validation_type="password"-->
-<!--        app:input_layout_password_min_length="six"-->
-<!--        app:input_layout_error_message="Please provide 6 char password"-->
-<!--        app:input_layout_error_icon="@mipmap/ic_launcher"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-
-<!--        <com.iamkamrul.input.TextInputEditText-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
-
-<!--    </com.iamkamrul.input.TextInputLayout>-->
-
-<!--    <TextView-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="Radio Example"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"/>-->
-
-<!--    <RadioGroup-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-
-<!--        <com.iamkamrul.radio.RadioButtonRegular-->
-<!--            android:id="@+id/maleRb"-->
-<!--            app:rb_border_radius="10dp"-->
-<!--            app:rb_background_shape="stroke"-->
-<!--            app:rb_stroke_width="2dp"-->
-<!--            app:rb_stroke_color="@color/black"-->
-<!--            app:rb_selected_bg_color="@color/teal_700"-->
-<!--            app:rb_selected_text_color="@color/white"-->
-<!--            android:button="@android:color/transparent"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Male"-->
-<!--            android:layout_width="102dp"-->
-<!--            android:layout_height="45dp"/>-->
-
-<!--        <com.iamkamrul.radio.RadioButtonRegular-->
-<!--            android:id="@+id/femaleRb"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            app:rb_background_shape="stroke"-->
-<!--            app:rb_stroke_width="2dp"-->
-<!--            app:rb_stroke_color="@color/black"-->
-<!--            app:rb_border_radius="10dp"-->
-<!--            app:rb_selected_bg_color="@color/teal_700"-->
-<!--            app:rb_selected_text_color="@color/white"-->
-<!--            android:button="@android:color/transparent"-->
-<!--            android:gravity="center"-->
-<!--            android:text="FeMale"-->
-<!--            android:layout_width="102dp"-->
-<!--            android:layout_height="45dp"/>-->
-
-<!--    </RadioGroup>-->
-
-<!--    <TextView-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="Cons Example"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"/>-->
-
-
-
-<!--    <com.iamkamrul.layout.ConstraintLayout-->
-<!--        android:id="@+id/btnCl"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        app:cl_ripple_color="@color/teal_200"-->
-<!--        app:cl_background_color="@color/purple_700"-->
-<!--        app:cl_border_radius="20dp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="56dp">-->
-
-<!--        <com.iamkamrul.textview.TextViewBold-->
-<!--            android:id="@+id/tv1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Login"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textColor="@color/white"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="24dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:layout_marginEnd="16dp"-->
-<!--            android:src="@mipmap/ic_launcher"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/tv1"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/tv1"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/tv1" />-->
-
-<!--    </com.iamkamrul.layout.ConstraintLayout>-->
+    <com.iamkamrul.view.ImageView
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:iv_corner_radius="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
 
 </LinearLayout>

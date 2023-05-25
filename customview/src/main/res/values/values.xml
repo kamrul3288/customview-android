@@ -276,7 +276,10 @@
             <enum name="oval" value="2"/>
             <enum name="stroke_circle" value="3"/>
         </attr>
+    </declare-styleable>
 
+    <declare-styleable name="ImageView">
+        <attr name="iv_corner_radius" format="dimension"/>
     </declare-styleable>
 
 </resources>
