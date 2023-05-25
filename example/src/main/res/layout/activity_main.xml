@@ -83,6 +83,32 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"/>
 
+  <RadioGroup
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.iamkamrul.radio.RadioButtonRegular
+          android:id="@+id/maleRb"
+          android:layout_marginTop="20dp"
+          android:text="Male"
+          android:checked="true"
+          app:rb_checked_drawable="@drawable/ic_radio_check"
+          app:rb_uncheck_drawable="@drawable/ic_radio_unchecked"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <com.iamkamrul.radio.RadioButtonRegular
+          android:id="@+id/femaleRb"
+          android:layout_marginTop="20dp"
+          android:text="Female"
+          app:rb_checked_drawable="@drawable/ic_radio_check"
+          app:rb_uncheck_drawable="@drawable/ic_radio_unchecked"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+  </RadioGroup>
+
 
 <!--    <TextView-->
 <!--        android:layout_marginTop="16dp"-->
