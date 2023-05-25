@@ -11,7 +11,7 @@ import androidx.appcompat.widget.AppCompatCheckBox
 import com.iamkamrul.customview.R
 import com.iamkamrul.utils.FontsOverride
 
-class CheckBoxRegular : AppCompatCheckBox{
+open class CheckBoxRegular : AppCompatCheckBox{
     private var attrCheckedDrawable: Drawable? = null
     private var attrUnCheckDrawable: Drawable? = null
     @ColorInt private var attrCheckedTextColor:Int = Color.BLACK
