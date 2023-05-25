@@ -1,120 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="@color/white"
-    tools:context=".MainActivity"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
 
     <com.iamkamrul.textview.TextViewRegular
         android:id="@+id/helloTv"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
         android:text="Text View Example"
         android:textColor="@color/white"
-        android:gravity="center"
         app:tv_background_shape="rectangle"
-        android:background="@color/purple_700"
-        app:tv_topRight_corner_radius="15dp"
-        android:layout_width="180dp"
-        android:layout_height="40dp"/>
+        app:tv_topRight_corner_radius="15dp" />
 
 
     <com.iamkamrul.button.ButtonRegular
         android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:text="Button Example"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:btn_background_shape="rectangle"
-        app:btn_gradient_top_color="@color/teal_700"
-        app:btn_gradient_middle_color="@color/purple_200"
-        app:btn_gradient_bottom_color="@color/teal_200"
-        app:btn_gradient_orientation="LEFT_RIGHT"
         app:btn_corner_radius="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        app:btn_gradient_bottom_color="@color/teal_200"
+        app:btn_gradient_middle_color="@color/purple_200"
+        app:btn_gradient_orientation="LEFT_RIGHT"
+        app:btn_gradient_top_color="@color/teal_700" />
 
     <com.iamkamrul.button.MaterialButtonRegular
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mt_btn_background_shape="rectangle"
-        app:mt_btn_corner_radius="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/teal_200"
+        android:elevation="0dp"
         android:text="Material Button"
         android:textAllCaps="false"
-        android:elevation="0dp"
-        android:background="@color/teal_200"
-        android:layout_marginTop="16dp"
         app:icon="@drawable/baseline_add_24"
-        app:iconGravity="textStart" />
+        app:iconGravity="textStart"
+        app:mt_btn_background_shape="rectangle"
+        app:mt_btn_corner_radius="10dp" />
 
     <com.iamkamrul.layout.LinearLayout
-        app:ll_gradient_top_color="@color/teal_700"
-        app:ll_gradient_middle_color="@color/teal_200"
-        app:ll_gradient_bottom_color="@color/purple_200"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_marginTop="16dp"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
+        app:ll_background_shape="rectangle"
         app:ll_bottomLeft_corner_radius="15dp"
         app:ll_bottomRight_corner_radius="15dp"
-        app:ll_background_shape="rectangle"
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
+        app:ll_gradient_bottom_color="@color/purple_200"
+        app:ll_gradient_middle_color="@color/teal_200"
+        app:ll_gradient_top_color="@color/teal_700">
 
         <com.iamkamrul.textview.TextViewRegular
-            android:text="Bangladesh"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Bangladesh" />
 
         <com.iamkamrul.textview.TextViewRegular
-            android:text="Bangladesh"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Bangladesh" />
 
     </com.iamkamrul.layout.LinearLayout>
 
     <com.iamkamrul.view.View
-        app:view_background_shape="rectangle"
-        app:view_corner_radius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
         android:layout_marginTop="16dp"
         android:background="@color/purple_200"
+        app:view_background_shape="rectangle"
+        app:view_corner_radius="10dp" />
+
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-  <RadioGroup
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/maleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:text="Male"
+            app:rb_checked_drawable="@drawable/ic_radio_check"
+            app:rb_uncheck_drawable="@drawable/ic_radio_unchecked" />
 
-      <com.iamkamrul.radio.RadioButtonRegular
-          android:id="@+id/maleRb"
-          android:layout_marginTop="20dp"
-          android:text="Male"
-          android:checked="true"
-          app:rb_checked_drawable="@drawable/ic_radio_check"
-          app:rb_uncheck_drawable="@drawable/ic_radio_unchecked"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"/>
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/femaleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Female"
+            app:rb_checked_drawable="@drawable/ic_radio_check"
+            app:rb_uncheck_drawable="@drawable/ic_radio_unchecked" />
 
-      <com.iamkamrul.radio.RadioButtonRegular
-          android:id="@+id/femaleRb"
-          android:layout_marginTop="20dp"
-          android:text="Female"
-          app:rb_checked_drawable="@drawable/ic_radio_check"
-          app:rb_uncheck_drawable="@drawable/ic_radio_unchecked"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"/>
+    </RadioGroup>
 
-  </RadioGroup>
+    <com.iamkamrul.checkbox.CheckBoxRegular
+        app:cb_checked_text_color="#FF5722"
+        app:cb_checked_drawable="@drawable/ic_radio_check"
+        app:cb_uncheck_drawable="@drawable/ic_radio_unchecked"
+        android:text="Hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <com.iamkamrul.view.ImageView
-        android:src="@drawable/ic_launcher_background"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_marginTop="16dp"
         android:scaleType="fitXY"
-        app:iv_corner_radius="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:src="@drawable/ic_launcher_background"
+        app:iv_corner_radius="20dp" />
 
 </LinearLayout>

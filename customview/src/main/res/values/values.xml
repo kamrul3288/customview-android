@@ -282,4 +282,11 @@
         <attr name="iv_corner_radius" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="CheckBoxRegular">
+        <attr name="cb_checked_drawable" format="reference|color"/>
+        <attr name="cb_uncheck_drawable" format="reference|color"/>
+        <attr name="cb_checked_text_color" format="color"/>
+        <attr name="cb_uncheck_text_color" format="color"/>
+    </declare-styleable>
+
 </resources>
