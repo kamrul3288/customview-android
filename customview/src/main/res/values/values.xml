@@ -262,20 +262,34 @@
     </declare-styleable>
 
     <declare-styleable name="RadioButtonRegular">
-        <attr name="rb_checked_drawable" format="reference|color"/>
-        <attr name="rb_uncheck_drawable" format="reference|color"/>
+        <attr name="rb_checked_btn_drawable" format="reference|color"/>
+        <attr name="rb_unchecked_btn_drawable" format="reference|color"/>
+        <attr name="rb_checked_bg_drawable" format="reference|color"/>
+        <attr name="rb_unchecked_bg_drawable" format="reference|color"/>
         <attr name="rb_checked_text_color" format="color"/>
-        <attr name="rb_uncheck_text_color" format="color"/>
-        <attr name="rb_stroke_color" format="color"/>
+        <attr name="rb_unchecked_text_color" format="color"/>
+        <attr name="rb_checked_stroke_color" format="color"/>
+        <attr name="rb_unchecked_stroke_color" format="color"/>
         <attr name="rb_stroke_width" format="dimension"/>
+        <attr name="rb_checked_bg_color" format="color"/>
+        <attr name="rb_unchecked_bg_color" format="color"/>
         <attr name="rb_corner_radius" format="dimension"/>
 
-        <attr name="rb_background_shape" format="enum">
+
+        <attr name="rb_checked_bg_shape" format="enum">
             <enum name="stroke" value="0"/>
             <enum name="rectangle" value="1"/>
             <enum name="oval" value="2"/>
             <enum name="stroke_circle" value="3"/>
         </attr>
+
+        <attr name="rb_unchecked_bg_shape" format="enum">
+            <enum name="stroke" value="0"/>
+            <enum name="rectangle" value="1"/>
+            <enum name="oval" value="2"/>
+            <enum name="stroke_circle" value="3"/>
+        </attr>
+
     </declare-styleable>
 
     <declare-styleable name="ImageView">

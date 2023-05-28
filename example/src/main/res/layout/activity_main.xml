@@ -83,32 +83,6 @@
         app:view_background_shape="rectangle"
         app:view_corner_radius="10dp" />
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.iamkamrul.radio.RadioButtonRegular
-            android:id="@+id/maleRb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:checked="true"
-            android:text="Male"
-            app:rb_checked_drawable="@drawable/ic_radio_check"
-            app:rb_uncheck_drawable="@drawable/ic_radio_unchecked" />
-
-        <com.iamkamrul.radio.RadioButtonRegular
-            android:id="@+id/femaleRb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Female"
-            app:rb_checked_drawable="@drawable/ic_radio_check"
-            app:rb_uncheck_drawable="@drawable/ic_radio_unchecked" />
-
-    </RadioGroup>
-
     <com.iamkamrul.checkbox.CheckBoxRegular
         app:cb_checked_text_color="#FF5722"
         app:cb_checked_drawable="@drawable/ic_radio_check"
@@ -124,5 +98,100 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_background"
         app:iv_corner_radius="20dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/maleRb"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Male"
+            app:rb_checked_text_color="@color/white"
+            android:gravity="center"
+            app:rb_corner_radius="20dp"
+            app:rb_checked_bg_shape="rectangle"
+            app:rb_checked_bg_color="@color/purple_200"
+
+            app:rb_unchecked_bg_shape="stroke"
+            app:rb_unchecked_stroke_color="@color/purple_200"
+            app:rb_stroke_width="2dp" />
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/femaleRb"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Female"
+            app:rb_checked_text_color="@color/white"
+            android:gravity="center"
+            app:rb_corner_radius="20dp"
+            app:rb_checked_bg_shape="rectangle"
+            app:rb_checked_bg_color="@color/purple_200"
+
+            app:rb_unchecked_bg_shape="stroke"
+            app:rb_unchecked_stroke_color="@color/purple_200"
+            app:rb_stroke_width="2dp" />
+
+    </RadioGroup>
+
+<!--    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/maleRb"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Male"
+            app:rb_checked_text_color="@color/white"
+            android:gravity="center"
+            app:rb_checked_bg_drawable="@drawable/custom_bg"
+            app:rb_unchecked_bg_drawable="@drawable/custom_bg_2" />
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/femaleRb"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Female"
+            app:rb_checked_text_color="@color/white"
+            android:gravity="center"
+            app:rb_checked_bg_drawable="@drawable/custom_bg"
+            app:rb_unchecked_bg_drawable="@drawable/custom_bg_2" />
+
+    </RadioGroup>-->
+
+<!--    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/maleRb"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Male"
+            app:rb_checked_btn_drawable="@drawable/ic_radio_check"
+            app:rb_unchecked_btn_drawable="@drawable/ic_radio_unchecked" />
+
+        <com.iamkamrul.radio.RadioButtonRegular
+            android:id="@+id/femaleRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Female"
+            app:rb_checked_btn_drawable="@drawable/ic_radio_check"
+            app:rb_unchecked_btn_drawable="@drawable/ic_radio_unchecked" />
+
+    </RadioGroup>-->
 
 </LinearLayout>
