@@ -303,4 +303,17 @@
         <attr name="cb_uncheck_text_color" format="color"/>
     </declare-styleable>
 
+    <declare-styleable name="DottedLine">
+        <attr name="dot_stroke_width" format="dimension"/>
+        <attr name="dot_gap_size" format="dimension"/>
+        <attr name="dot_line_width" format="dimension"/>
+        <attr name="dot_bg_color" format="color"/>
+
+        <attr name="dot_orientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+
+    </declare-styleable>
+
 </resources>

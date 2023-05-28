@@ -139,6 +139,21 @@
 
     </RadioGroup>
 
+    <com.iamkamrul.view.DottedLine
+        android:layout_marginTop="16dp"
+        app:dot_bg_color="@color/purple_700"
+        android:layout_width="match_parent"
+        app:dot_stroke_width="2dp"
+        android:layout_height="2dp"/>
+
+    <com.iamkamrul.view.DottedLine
+        android:layout_marginTop="16dp"
+        app:dot_bg_color="@color/purple_700"
+        app:dot_orientation="vertical"
+        app:dot_stroke_width="2dp"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"/>
+
 <!--    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
