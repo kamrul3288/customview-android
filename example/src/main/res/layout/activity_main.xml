@@ -139,6 +139,22 @@
 
     </RadioGroup>
 
+   <com.iamkamrul.input.TextInputLayout
+       android:id="@+id/inputLayout"
+       app:input_layout_error_icon="@mipmap/ic_launcher"
+       app:input_layout_error_message="Invalid Email"
+       app:input_layout_validation_enable="true"
+       app:input_layout_validation_type="email"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <com.iamkamrul.input.TextInputEditText
+           android:id="@+id/et1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+   </com.iamkamrul.input.TextInputLayout>
+
     <com.iamkamrul.view.DottedLine
         android:layout_marginTop="16dp"
         app:dot_bg_color="@color/purple_700"

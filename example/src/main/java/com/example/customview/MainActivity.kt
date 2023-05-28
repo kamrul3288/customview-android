@@ -3,6 +3,7 @@ package com.example.customview
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.widget.doAfterTextChanged
 import com.example.customview.databinding.ActivityMainBinding
 import com.iamkamrul.utils.Shape
 
@@ -22,5 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding.helloTv.setOnClickListener {
 
         }
+
+
     }
 }

@@ -1,7 +1,7 @@
 object DependenciesVersion {
     const val core_ktx_version = "1.10.0"
     const val appcompat_version = "1.6.1"
-    const val material_version = "1.8.0"
+    const val material_version = "1.9.0"
     const val constraint_layout_version = "2.1.4"
     const val card_view_version = "1.0.0"
     const val activity_version = "1.7.1"
