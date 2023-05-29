@@ -112,15 +112,16 @@
             android:layout_marginTop="20dp"
             android:text="Male"
             app:rb_btn_start_padding="16dp"
-            app:rb_checked_text_color="@color/white"
             android:gravity="center"
             app:rb_corner_radius="20dp"
             app:rb_checked_btn_drawable="@drawable/ic_radio_check"
             app:rb_unchecked_btn_drawable="@drawable/ic_radio_unchecked"
-            app:rb_checked_bg_shape="rectangle"
-            app:rb_checked_bg_color="@color/purple_200"
+
+            app:rb_checked_bg_shape="stroke"
             app:rb_unchecked_bg_shape="stroke"
-            app:rb_unchecked_stroke_color="@color/purple_200"
+
+            app:rb_checked_stroke_color="#058A22"
+            app:rb_unchecked_stroke_color="#AEAEAE"
             app:rb_stroke_width="2dp" />
 
         <com.iamkamrul.radio.RadioButtonRegular

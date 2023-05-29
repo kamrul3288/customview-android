@@ -58,9 +58,9 @@ open class RadioButtonRegular : AppCompatRadioButton{
         attrCornerRadius = typedArray.getDimension(R.styleable.RadioButtonRegular_rb_corner_radius,0f)
 
         val checkedBgShapeIndex = typedArray.getInt(R.styleable.RadioButtonRegular_rb_checked_bg_shape,-1)
-        attrCheckedBgShape = if (checkedBgShapeIndex>0)Shape.values()[checkedBgShapeIndex] else null
+        attrCheckedBgShape = if (checkedBgShapeIndex>=0)Shape.values()[checkedBgShapeIndex] else null
         val unCheckedBgShapeIndex = typedArray.getInt(R.styleable.RadioButtonRegular_rb_unchecked_bg_shape,-1)
-        attrUnCheckedBgShape = if (checkedBgShapeIndex>0)Shape.values()[unCheckedBgShapeIndex] else null
+        attrUnCheckedBgShape = if (unCheckedBgShapeIndex>=0)Shape.values()[unCheckedBgShapeIndex] else null
 
         attrCheckedStrokeColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_checked_stroke_color,Color.TRANSPARENT)
         attrStrokeWidth = typedArray.getDimension(R.styleable.RadioButtonRegular_rb_stroke_width,0f)
