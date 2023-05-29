@@ -274,6 +274,7 @@
         <attr name="rb_checked_bg_color" format="color"/>
         <attr name="rb_unchecked_bg_color" format="color"/>
         <attr name="rb_corner_radius" format="dimension"/>
+        <attr name="rb_btn_start_padding" format="dimension"/>
 
 
         <attr name="rb_checked_bg_shape" format="enum">

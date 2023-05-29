@@ -6,6 +6,7 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.InsetDrawable
 import android.graphics.drawable.StateListDrawable
 import android.util.AttributeSet
 import androidx.annotation.ColorInt
@@ -67,6 +68,7 @@ open class RadioButtonRegular : AppCompatRadioButton{
         attrCheckedBgColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_checked_bg_color,Color.TRANSPARENT)
         attrUnCheckedBgColor = typedArray.getColor(R.styleable.RadioButtonRegular_rb_unchecked_bg_color,Color.TRANSPARENT)
 
+        val attrBtnStartPadding = typedArray.getDimension(R.styleable.RadioButtonRegular_rb_btn_start_padding,0f)
         typedArray.recycle()
 
         //--------------set text color sate Enable color and disable color-----------------
@@ -81,14 +83,13 @@ open class RadioButtonRegular : AppCompatRadioButton{
             )
         ))
 
+        getStateListDrawable(attrCheckedBtnDrawable,attrUnCheckedBtnDrawable)?.let {stateListDrawable ->
+            buttonDrawable = if (attrBtnStartPadding>0) InsetDrawable(stateListDrawable, attrBtnStartPadding.toInt(), 0, 0, 0)
+            else stateListDrawable
+        }
         if (attrCheckedBgDrawable != null && attrUnCheckedBgDrawable != null){
-            buttonDrawable = null
             background = getStateListDrawable(attrCheckedBgDrawable,attrUnCheckedBgDrawable)
-        }else if (attrCheckedBtnDrawable != null && attrUnCheckedBtnDrawable != null){
-            buttonDrawable = getStateListDrawable(attrCheckedBtnDrawable,attrUnCheckedBtnDrawable)
-
         }else if (attrCheckedBgShape != null && attrUnCheckedBgShape!=null){
-            buttonDrawable = null
             val checkedDrawable = getDrawableShape(shape = attrCheckedBgShape!!, strokeColor = attrCheckedStrokeColor, bgColor = attrCheckedBgColor)
             val unCheckedDrawable = getDrawableShape(shape = attrUnCheckedBgShape!!, strokeColor = attrUnCheckedStrokeColor, bgColor = attrUnCheckedBgColor)
             background = getStateListDrawable(checkedDrawable,unCheckedDrawable)
@@ -131,11 +132,13 @@ open class RadioButtonRegular : AppCompatRadioButton{
     private fun getStateListDrawable(
         checkedDrawable:Drawable?,
         uncheckedDrawable:Drawable?
-    ):StateListDrawable{
-        val stateListDrawable = StateListDrawable()
-        stateListDrawable.addState(intArrayOf(android.R.attr.state_checked),checkedDrawable)
-        stateListDrawable.addState(intArrayOf(-android.R.attr.state_checked),uncheckedDrawable)
-        return  stateListDrawable
+    ):StateListDrawable?{
+        return if (checkedDrawable != null && uncheckedDrawable != null){
+            val stateListDrawable = StateListDrawable()
+            stateListDrawable.addState(intArrayOf(android.R.attr.state_checked),checkedDrawable)
+            stateListDrawable.addState(intArrayOf(-android.R.attr.state_checked),uncheckedDrawable)
+            stateListDrawable
+        }else null
     }
 
 
