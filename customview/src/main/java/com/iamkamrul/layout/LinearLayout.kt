@@ -17,7 +17,7 @@ import com.iamkamrul.utils.GradientOrientation
 import com.iamkamrul.utils.Shape
 import com.iamkamrul.utils.dp
 
-open class LinearLayout : LinearLayoutCompat{
+class LinearLayout : LinearLayoutCompat{
     private  var drawableBuilder: GradientDrawable? = null
     private var attrCornerRadius = 0f
     private var attrTopLeftCornerRadius = 0f

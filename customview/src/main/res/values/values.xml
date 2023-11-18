@@ -203,7 +203,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="View">
+    <declare-styleable name="CustomView">
         <attr name="view_corner_radius" format="dimension"/>
         <attr name="view_topLeft_corner_radius" format="dimension"/>
         <attr name="view_topRight_corner_radius" format="dimension"/>

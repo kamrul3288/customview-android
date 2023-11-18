@@ -12,7 +12,7 @@ import com.iamkamrul.customview.R
 import com.iamkamrul.utils.GradientOrientation
 import com.iamkamrul.utils.Shape
 
-open class View : View {
+open class CustomView : View {
     private  var drawableBuilder: GradientDrawable? = null
     private var attrCornerRadius = 0f
     private var attrTopLeftCornerRadius = 0f
@@ -36,19 +36,19 @@ open class View : View {
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.View,0,0)
-        attrCornerRadius = typedArray.getDimension(R.styleable.View_view_corner_radius,0f)
-        attrTopLeftCornerRadius = typedArray.getDimension(R.styleable.View_view_topLeft_corner_radius,0f)
-        attrTopRightCornerRadius = typedArray.getDimension(R.styleable.View_view_topRight_corner_radius,0f)
-        attrBottomLeftCornerRadius = typedArray.getDimension(R.styleable.View_view_bottomLeft_corner_radius,0f)
-        attrBottomRightCornerRadius = typedArray.getDimension(R.styleable.View_view_bottomRight_corner_radius,0f)
-        val attrShapeTypeInt = typedArray.getInt(R.styleable.View_view_background_shape,-1)
-        attrStrokeColor = typedArray.getColor(R.styleable.View_view_stroke_color,Color.TRANSPARENT)
-        attrStrokeWidth = typedArray.getDimension(R.styleable.View_view_stroke_width,0f)
-        attrGradientOrientation = GradientOrientation.values()[typedArray.getInt(R.styleable.View_view_gradient_orientation, 0)]
-        attrGradientTopColor = typedArray.getColor(R.styleable.View_view_gradient_top_color,-1)
-        attrGradientMiddleColor = typedArray.getColor(R.styleable.View_view_gradient_middle_color,-1)
-        attrGradientBottomColor = typedArray.getColor(R.styleable.View_view_gradient_bottom_color,-1)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomView,0,0)
+        attrCornerRadius = typedArray.getDimension(R.styleable.CustomView_view_corner_radius,0f)
+        attrTopLeftCornerRadius = typedArray.getDimension(R.styleable.CustomView_view_topLeft_corner_radius,0f)
+        attrTopRightCornerRadius = typedArray.getDimension(R.styleable.CustomView_view_topRight_corner_radius,0f)
+        attrBottomLeftCornerRadius = typedArray.getDimension(R.styleable.CustomView_view_bottomLeft_corner_radius,0f)
+        attrBottomRightCornerRadius = typedArray.getDimension(R.styleable.CustomView_view_bottomRight_corner_radius,0f)
+        val attrShapeTypeInt = typedArray.getInt(R.styleable.CustomView_view_background_shape,-1)
+        attrStrokeColor = typedArray.getColor(R.styleable.CustomView_view_stroke_color,Color.TRANSPARENT)
+        attrStrokeWidth = typedArray.getDimension(R.styleable.CustomView_view_stroke_width,0f)
+        attrGradientOrientation = GradientOrientation.values()[typedArray.getInt(R.styleable.CustomView_view_gradient_orientation, 0)]
+        attrGradientTopColor = typedArray.getColor(R.styleable.CustomView_view_gradient_top_color,-1)
+        attrGradientMiddleColor = typedArray.getColor(R.styleable.CustomView_view_gradient_middle_color,-1)
+        attrGradientBottomColor = typedArray.getColor(R.styleable.CustomView_view_gradient_bottom_color,-1)
         typedArray.recycle()
 
 

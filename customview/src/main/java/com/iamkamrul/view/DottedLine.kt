@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import com.iamkamrul.customview.R
 import com.iamkamrul.utils.dp
 
-class DottedLine (context: Context, attrs: AttributeSet) : View(context, attrs){
+class DottedLine (context: Context, attrs: AttributeSet) : CustomView(context, attrs){
     enum class DottedLineOrientation{HORIZONTAL,VERTICAL}
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
