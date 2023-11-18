@@ -137,7 +137,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="FrameLayout">
+    <declare-styleable name="CustomFrameLayout">
         <attr name="fl_corner_radius" format="dimension"/>
         <attr name="fl_topLeft_corner_radius" format="dimension"/>
         <attr name="fl_topRight_corner_radius" format="dimension"/>
@@ -170,7 +170,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="ConstraintLayout">
+    <declare-styleable name="CustomConstraintLayout">
         <attr name="cl_corner_radius" format="dimension"/>
         <attr name="cl_topLeft_corner_radius" format="dimension"/>
         <attr name="cl_topRight_corner_radius" format="dimension"/>
@@ -293,7 +293,7 @@
 
     </declare-styleable>
 
-    <declare-styleable name="ImageView">
+    <declare-styleable name="CustomImageView">
         <attr name="iv_corner_radius" format="dimension"/>
     </declare-styleable>
 

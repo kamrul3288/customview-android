@@ -17,7 +17,7 @@ import com.iamkamrul.utils.GradientOrientation
 import com.iamkamrul.utils.Shape
 import com.iamkamrul.utils.dp
 
-class ConstraintLayout : ConstraintLayout {
+class CustomConstraintLayout : ConstraintLayout {
 
     private  var drawableBuilder: GradientDrawable? = null
     private var attrCornerRadius = 0f
@@ -43,21 +43,21 @@ class ConstraintLayout : ConstraintLayout {
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ConstraintLayout,0,0)
-        attrCornerRadius = typedArray.getDimension(R.styleable.ConstraintLayout_cl_corner_radius,0f)
-        attrTopLeftCornerRadius = typedArray.getDimension(R.styleable.ConstraintLayout_cl_topLeft_corner_radius,0f)
-        attrTopRightCornerRadius = typedArray.getDimension(R.styleable.ConstraintLayout_cl_topRight_corner_radius,0f)
-        attrBottomLeftCornerRadius = typedArray.getDimension(R.styleable.ConstraintLayout_cl_bottomLeft_corner_radius,0f)
-        attrBottomRightCornerRadius = typedArray.getDimension(R.styleable.ConstraintLayout_cl_bottomRight_corner_radius,0f)
-        val attrShapeTypeInt = typedArray.getInt(R.styleable.ConstraintLayout_cl_background_shape,-1)
-        attrStrokeColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_stroke_color,Color.TRANSPARENT)
-        attrStrokeWidth = typedArray.getDimension(R.styleable.ConstraintLayout_cl_stroke_width,0f)
-        attrBgDisableColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_disable_bg_color, Color.GRAY)
-        attrGradientOrientation = GradientOrientation.values()[typedArray.getInt(R.styleable.ConstraintLayout_cl_gradient_orientation, 0)]
-        attrGradientTopColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_gradient_top_color,-1)
-        attrGradientMiddleColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_gradient_middle_color,-1)
-        attrGradientBottomColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_gradient_bottom_color,-1)
-        attrRippleColor = typedArray.getColor(R.styleable.ConstraintLayout_cl_ripple_color,Color.TRANSPARENT)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomConstraintLayout,0,0)
+        attrCornerRadius = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_corner_radius,0f)
+        attrTopLeftCornerRadius = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_topLeft_corner_radius,0f)
+        attrTopRightCornerRadius = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_topRight_corner_radius,0f)
+        attrBottomLeftCornerRadius = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_bottomLeft_corner_radius,0f)
+        attrBottomRightCornerRadius = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_bottomRight_corner_radius,0f)
+        val attrShapeTypeInt = typedArray.getInt(R.styleable.CustomConstraintLayout_cl_background_shape,-1)
+        attrStrokeColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_stroke_color,Color.TRANSPARENT)
+        attrStrokeWidth = typedArray.getDimension(R.styleable.CustomConstraintLayout_cl_stroke_width,0f)
+        attrBgDisableColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_disable_bg_color, Color.GRAY)
+        attrGradientOrientation = GradientOrientation.values()[typedArray.getInt(R.styleable.CustomConstraintLayout_cl_gradient_orientation, 0)]
+        attrGradientTopColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_gradient_top_color,-1)
+        attrGradientMiddleColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_gradient_middle_color,-1)
+        attrGradientBottomColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_gradient_bottom_color,-1)
+        attrRippleColor = typedArray.getColor(R.styleable.CustomConstraintLayout_cl_ripple_color,Color.TRANSPARENT)
         typedArray.recycle()
 
         //--------------check user select any shape type or not-----------------

@@ -51,7 +51,7 @@
         app:mt_btn_background_shape="rectangle"
         app:mt_btn_corner_radius="10dp" />
 
-    <com.iamkamrul.layout.LinearLayout
+    <com.iamkamrul.layout.CustomLinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
@@ -74,9 +74,9 @@
             android:layout_height="wrap_content"
             android:text="Bangladesh" />
 
-    </com.iamkamrul.layout.LinearLayout>
+    </com.iamkamrul.layout.CustomLinearLayout>
 
-    <com.iamkamrul.view.View
+    <com.iamkamrul.view.CustomView
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="16dp"
@@ -92,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.iamkamrul.view.ImageView
+    <com.iamkamrul.view.CustomImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"

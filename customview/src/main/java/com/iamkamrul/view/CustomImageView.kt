@@ -8,7 +8,7 @@ import android.view.ViewOutlineProvider
 import androidx.appcompat.widget.AppCompatImageView
 import com.iamkamrul.customview.R
 
-class ImageView : AppCompatImageView {
+class CustomImageView : AppCompatImageView {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet) : super(context,attrs){
         applyAttributes(attrs,context)
@@ -16,8 +16,8 @@ class ImageView : AppCompatImageView {
     constructor(context: Context, attrs: AttributeSet, defStyleAttr:Int) : super(context,attrs,defStyleAttr)
 
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ImageView,0,0)
-        val cornerRadius = typedArray.getDimension(R.styleable.ImageView_iv_corner_radius,0f)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomImageView,0,0)
+        val cornerRadius = typedArray.getDimension(R.styleable.CustomImageView_iv_corner_radius,0f)
         if (cornerRadius>0){
             this.outlineProvider = object : ViewOutlineProvider(){
                 override fun getOutline(view: View, outline: Outline?) {
