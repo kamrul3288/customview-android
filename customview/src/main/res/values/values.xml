@@ -104,7 +104,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="LinearLayout">
+    <declare-styleable name="CustomLinearLayout">
         <attr name="ll_corner_radius" format="dimension"/>
         <attr name="ll_topLeft_corner_radius" format="dimension"/>
         <attr name="ll_topRight_corner_radius" format="dimension"/>

@@ -43,21 +43,21 @@ class CustomLinearLayout : LinearLayoutCompat{
 
     @SuppressLint("CustomViewStyleable")
     private fun applyAttributes(attrs: AttributeSet,context: Context){
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LinearLayout,0,0)
-        attrCornerRadius = typedArray.getDimension(R.styleable.LinearLayout_ll_corner_radius,0f)
-        attrTopLeftCornerRadius = typedArray.getDimension(R.styleable.LinearLayout_ll_topLeft_corner_radius,0f)
-        attrTopRightCornerRadius = typedArray.getDimension(R.styleable.LinearLayout_ll_topRight_corner_radius,0f)
-        attrBottomLeftCornerRadius = typedArray.getDimension(R.styleable.LinearLayout_ll_bottomLeft_corner_radius,0f)
-        attrBottomRightCornerRadius = typedArray.getDimension(R.styleable.LinearLayout_ll_bottomRight_corner_radius,0f)
-        val attrShapeTypeInt = typedArray.getInt(R.styleable.LinearLayout_ll_background_shape,-1)
-        attrStrokeColor = typedArray.getColor(R.styleable.LinearLayout_ll_stroke_color,Color.TRANSPARENT)
-        attrStrokeWidth = typedArray.getDimension(R.styleable.LinearLayout_ll_stroke_width,0f)
-        attrBgDisableColor = typedArray.getColor(R.styleable.LinearLayout_ll_disable_bg_color, Color.GRAY)
-        attrGradientOrientation = GradientOrientation.values()[typedArray.getInt(R.styleable.LinearLayout_ll_gradient_orientation, 0)]
-        attrGradientTopColor = typedArray.getColor(R.styleable.LinearLayout_ll_gradient_top_color,-1)
-        attrGradientMiddleColor = typedArray.getColor(R.styleable.LinearLayout_ll_gradient_middle_color,-1)
-        attrGradientBottomColor = typedArray.getColor(R.styleable.LinearLayout_ll_gradient_bottom_color,-1)
-        attrRippleColor = typedArray.getColor(R.styleable.LinearLayout_ll_ripple_color,Color.TRANSPARENT)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomLinearLayout,0,0)
+        attrCornerRadius = typedArray.getDimension(R.styleable.CustomLinearLayout_ll_corner_radius,0f)
+        attrTopLeftCornerRadius = typedArray.getDimension(R.styleable.CustomLinearLayout_ll_topLeft_corner_radius,0f)
+        attrTopRightCornerRadius = typedArray.getDimension(R.styleable.CustomLinearLayout_ll_topRight_corner_radius,0f)
+        attrBottomLeftCornerRadius = typedArray.getDimension(R.styleable.CustomLinearLayout_ll_bottomLeft_corner_radius,0f)
+        attrBottomRightCornerRadius = typedArray.getDimension(R.styleable.CustomLinearLayout_ll_bottomRight_corner_radius,0f)
+        val attrShapeTypeInt = typedArray.getInt(R.styleable.CustomLinearLayout_ll_background_shape,-1)
+        attrStrokeColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_stroke_color,Color.TRANSPARENT)
+        attrStrokeWidth = typedArray.getDimension(R.styleable.CustomLinearLayout_ll_stroke_width,0f)
+        attrBgDisableColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_disable_bg_color, Color.GRAY)
+        attrGradientOrientation = GradientOrientation.values()[typedArray.getInt(R.styleable.CustomLinearLayout_ll_gradient_orientation, 0)]
+        attrGradientTopColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_gradient_top_color,-1)
+        attrGradientMiddleColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_gradient_middle_color,-1)
+        attrGradientBottomColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_gradient_bottom_color,-1)
+        attrRippleColor = typedArray.getColor(R.styleable.CustomLinearLayout_ll_ripple_color,Color.TRANSPARENT)
         typedArray.recycle()
 
         //--------------check user select any shape type or not-----------------
